@@ -1,0 +1,40 @@
+<map id="HoofHomQty.cpp" name="HoofHomQty.cpp">
+<area shape="rect" id="Node000001" title="Contains the HoofHomQty class implementation." alt="" coords="85,5,208,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="127,225,182,251"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="125,33,83,58,39,93,22,113,11,134,9,155,17,176,36,197,61,212,88,222,114,229,113,234,87,227,59,217,33,201,12,179,4,155,6,132,17,110,35,89,80,54,122,28"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="212,225,271,251"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="154,30,233,211,228,213,149,32"/>
+<area shape="rect" id="Node000004" href="$HoofAux_8h.html" title="Contains definition of the HoofAux class." alt="" coords="486,79,570,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="208,28,473,77,472,82,208,33"/>
+<area shape="rect" id="Node000016" href="$HoofHomQty_8h.html" title="Contains definition of HoofHomQty class." alt="" coords="27,152,135,177"/>
+<area shape="poly" id="edge20_Node000001_Node000016" title=" " alt="" coords="144,32,95,141,90,138,139,30"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="486,98,436,103,376,113,312,130,251,154,208,184,175,217,171,213,205,180,248,150,310,125,375,108,435,98,485,92"/>
+<area shape="poly" id="edge5_Node000004_Node000003" title=" " alt="" coords="520,106,486,142,463,162,437,180,399,198,358,213,285,232,284,227,357,208,397,193,435,175,460,158,483,138,517,102"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="499,152,557,177"/>
+<area shape="poly" id="edge6_Node000004_Node000005" title=" " alt="" coords="531,104,531,138,525,138,525,104"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="581,152,656,177"/>
+<area shape="poly" id="edge7_Node000004_Node000006" title=" " alt="" coords="544,102,595,141,591,145,541,106"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="800,152,869,177"/>
+<area shape="poly" id="edge8_Node000004_Node000007" title=" " alt="" coords="571,100,787,149,786,154,570,105"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="893,152,976,177"/>
+<area shape="poly" id="edge9_Node000004_Node000008" title=" " alt="" coords="571,97,880,149,879,154,570,102"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="261,152,328,177"/>
+<area shape="poly" id="edge10_Node000004_Node000009" title=" " alt="" coords="491,107,342,152,340,147,490,101"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="924,225,977,251"/>
+<area shape="poly" id="edge11_Node000004_Node000010" title=" " alt="" coords="571,92,810,112,927,128,968,138,990,150,997,167,995,184,975,216,970,213,990,182,992,167,986,154,966,143,926,133,809,117,570,98"/>
+<area shape="rect" id="Node000011" href="$HoofTypes_8h.html" title="Contains a namespace with shorthand aliases for types used throughout HOOF." alt="" coords="680,152,776,177"/>
+<area shape="poly" id="edge12_Node000004_Node000011" title=" " alt="" coords="561,102,683,145,681,150,559,107"/>
+<area shape="rect" id="Node000015" title=" " alt="" coords="352,152,424,177"/>
+<area shape="poly" id="edge19_Node000004_Node000015" title=" " alt="" coords="507,106,424,148,422,143,504,102"/>
+<area shape="poly" id="edge18_Node000011_Node000002" title=" " alt="" coords="680,178,668,180,537,195,434,202,331,209,200,228,196,229,195,224,200,223,331,204,434,196,536,190,668,175,679,173"/>
+<area shape="poly" id="edge13_Node000011_Node000003" title=" " alt="" coords="680,178,668,180,453,212,285,234,284,229,452,207,668,175,679,173"/>
+<area shape="poly" id="edge16_Node000011_Node000010" title=" " alt="" coords="765,175,911,221,909,226,763,180"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="703,225,753,251"/>
+<area shape="poly" id="edge14_Node000011_Node000012" title=" " alt="" coords="731,178,731,212,725,212,725,178"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="777,225,839,251"/>
+<area shape="poly" id="edge15_Node000011_Node000013" title=" " alt="" coords="743,175,787,214,783,218,739,179"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="631,225,678,251"/>
+<area shape="poly" id="edge17_Node000011_Node000014" title=" " alt="" coords="718,180,678,218,675,214,714,176"/>
+<area shape="poly" id="edge21_Node000016_Node000002" title=" " alt="" coords="95,176,135,214,131,218,92,180"/>
+<area shape="poly" id="edge22_Node000016_Node000003" title=" " alt="" coords="108,175,204,217,202,222,106,180"/>
+</map>

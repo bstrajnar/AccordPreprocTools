@@ -1,0 +1,88 @@
+\doxysection{Hoof\+Hom\+Qty Class Reference}
+\hypertarget{classHoofHomQty}{}\label{classHoofHomQty}\index{HoofHomQty@{HoofHomQty}}
+
+
+Class that represents one homogenization quantity, which is a quantity that is represented by a /dataset/data/ or a /dataset/quality/ group in the HDF5 file. Maps between the groups before and after homogenization.  
+
+
+
+
+{\ttfamily \#include $<$Hoof\+Hom\+Qty.\+h$>$}
+
+
+
+Collaboration diagram for Hoof\+Hom\+Qty\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=170pt]{classHoofHomQty__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classHoofHomQty_a5079dc8d10fb15b3961aacf21569f240}\label{classHoofHomQty_a5079dc8d10fb15b3961aacf21569f240} 
+{\bfseries Hoof\+Hom\+Qty} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\Hypertarget{classHoofHomQty_adb777cc1e684c23903135a04dec99445}\label{classHoofHomQty_adb777cc1e684c23903135a04dec99445} 
+{\bfseries Hoof\+Hom\+Qty} (const std\+::string \&\+\_\+name, double \+\_\+el\+Angle, const std\+::string \&\+\_\+datetime, const std\+::string \&\+\_\+task, const std\+::string \&\mbox{\hyperlink{classHoofHomQty_aef815c7abe8173b5b1ca12659a4c7ecf}{old\+Dataset}}, const std\+::string \&\mbox{\hyperlink{classHoofHomQty_af461b69be63e4b942b190632bf2e7b8e}{old\+Data}})
+\item 
+bool \mbox{\hyperlink{classHoofHomQty_a51b247d8e95b0c9883e8147358dea095}{operator$<$}} (const \mbox{\hyperlink{classHoofHomQty}{Hoof\+Hom\+Qty}} \&qty) const
+\begin{DoxyCompactList}\small\item\em Definition of the less operator, for sorting the homogenization quantities by datetime. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classHoofHomQty_a49ea843b4b13b34d58bfb87f3f4ffb84}\label{classHoofHomQty_a49ea843b4b13b34d58bfb87f3f4ffb84} 
+std\+::string {\bfseries name}
+\begin{DoxyCompactList}\small\item\em Name of the quantity (DBZ, TH; VRAD or QUALITYn). \end{DoxyCompactList}\item 
+\Hypertarget{classHoofHomQty_aef480cf561e68294030b0310f4b0d897}\label{classHoofHomQty_aef480cf561e68294030b0310f4b0d897} 
+double {\bfseries el\+Angle}
+\begin{DoxyCompactList}\small\item\em Elevation angle of the dataset. \end{DoxyCompactList}\item 
+\Hypertarget{classHoofHomQty_a24b0b59ba9ed3d9c06bbe081bb8111d3}\label{classHoofHomQty_a24b0b59ba9ed3d9c06bbe081bb8111d3} 
+std\+::string {\bfseries datetime}
+\begin{DoxyCompactList}\small\item\em Start datetime of the dataset. \end{DoxyCompactList}\item 
+\Hypertarget{classHoofHomQty_addeb928c2f8ad07e3e874455a94ef751}\label{classHoofHomQty_addeb928c2f8ad07e3e874455a94ef751} 
+std\+::string {\bfseries task}
+\begin{DoxyCompactList}\small\item\em Shortened task name deduced of the quality group. \end{DoxyCompactList}\item 
+\Hypertarget{classHoofHomQty_aef815c7abe8173b5b1ca12659a4c7ecf}\label{classHoofHomQty_aef815c7abe8173b5b1ca12659a4c7ecf} 
+std\+::string {\bfseries old\+Dataset}
+\begin{DoxyCompactList}\small\item\em Dataset before homogenization. \end{DoxyCompactList}\item 
+\Hypertarget{classHoofHomQty_af461b69be63e4b942b190632bf2e7b8e}\label{classHoofHomQty_af461b69be63e4b942b190632bf2e7b8e} 
+std\+::string {\bfseries old\+Data}
+\begin{DoxyCompactList}\small\item\em Data group before homogenization. \end{DoxyCompactList}\item 
+\Hypertarget{classHoofHomQty_a5c0765f00944f4bd6cd2739265da6194}\label{classHoofHomQty_a5c0765f00944f4bd6cd2739265da6194} 
+std\+::string {\bfseries new\+Dataset}
+\begin{DoxyCompactList}\small\item\em Dataset group after homogenization. \end{DoxyCompactList}\item 
+\Hypertarget{classHoofHomQty_adad000b63637dfe9a6e7437bb410d6af}\label{classHoofHomQty_adad000b63637dfe9a6e7437bb410d6af} 
+std\+::string {\bfseries new\+Data}
+\begin{DoxyCompactList}\small\item\em Data Group after homogenization. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class that represents one homogenization quantity, which is a quantity that is represented by a /dataset/data/ or a /dataset/quality/ group in the HDF5 file. Maps between the groups before and after homogenization. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classHoofHomQty_a51b247d8e95b0c9883e8147358dea095}\label{classHoofHomQty_a51b247d8e95b0c9883e8147358dea095} 
+\index{HoofHomQty@{HoofHomQty}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!HoofHomQty@{HoofHomQty}}
+\doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily bool Hoof\+Hom\+Qty\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classHoofHomQty}{Hoof\+Hom\+Qty}} \&}]{qty }\end{DoxyParamCaption}) const}
+
+
+
+Definition of the less operator, for sorting the homogenization quantities by datetime. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em qty} & The \doxylink{classHoofHomQty}{Hoof\+Hom\+Qty} to compare with this one. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if this quantity\textquotesingle{}s datetime is sooner that the compared one. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{HoofHomQty_8h}{Hoof\+Hom\+Qty.\+h}}\item 
+\mbox{\hyperlink{HoofHomQty_8cpp}{Hoof\+Hom\+Qty.\+cpp}}\end{DoxyCompactItemize}

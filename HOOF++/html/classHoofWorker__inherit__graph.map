@@ -1,0 +1,9 @@
+<map id="HoofWorker" name="HoofWorker">
+<area shape="rect" id="Node000001" title="Class that handles output of warnings and errors." alt="" coords="153,5,243,31"/>
+<area shape="rect" id="Node000002" href="$classHoofDealiaser.html" title="Worker object that dealiases VRAD measurements." alt="" coords="5,79,111,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="165,39,82,81,80,76,162,34"/>
+<area shape="rect" id="Node000003" href="$classHoofHomogenizer.html" title="Worker object that homogenizes one HDF5 file." alt="" coords="135,79,261,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="201,44,201,79,195,79,195,44"/>
+<area shape="rect" id="Node000004" href="$classHoofSuperober.html" title="Worker object that makes super observations from DBZ and VRAD data." alt="" coords="286,79,395,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="234,34,319,76,316,81,232,39"/>
+</map>

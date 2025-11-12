@@ -1,0 +1,285 @@
+\doxysection{Hoof\+Aux.\+h}
+\hypertarget{HoofAux_8h_source}{}\label{HoofAux_8h_source}\mbox{\hyperlink{HoofAux_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#ifndef\ HOOFAUX\_GUARD}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ HOOFAUX\_GUARD}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <cmath>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <sstream>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <type\_traits>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <optional>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <limits>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <unordered\_set>}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{HoofTypes_8h}{HoofTypes.h}}>}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classHoofAux}{HoofAux}}}
+\DoxyCodeLine{00026\ \{}
+\DoxyCodeLine{00027\ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \textcolor{comment}{//\ members}}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classHoofAux_a456e29e979e4f31184493c0cc6213317}{dblEpsilon}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classHoofAux_af8a70b05b97f8ef7aefbb268df531580}{earthRadius}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classHoofAux_a3863e06715a5367bef1fc688d0d08fc7}{eqEarthFactor}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classHoofAux_abb592453794497978999f9c03cde18b9}{Pi}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>\ \textcolor{keyword}{static}\ T\ \mbox{\hyperlink{classHoofAux_a47b7292a94d230b3c19166a17a19e6da}{to}}(\textcolor{keyword}{const}\ std::string\&\ s)}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ std::string\ t\ =\ \mbox{\hyperlink{classHoofAux_acbbadccdbc4d527a3dec6400ac19f996}{HoofAux::trim}}(s);}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ T\ val;}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ \textcolor{keyword}{constexpr}\ (std::is\_same\_v<T,int>)}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ val\ =\ std::stoi(t);}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ \textcolor{keyword}{constexpr}\ (std::is\_same\_v<T,double>)}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ val\ =\ std::stod(t);}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ \textcolor{keyword}{constexpr}\ (std::is\_same\_v<T,\ bool>)}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ val\ =\ (t\ ==\ \textcolor{stringliteral}{"{}T"{}}\ ||\ t\ ==\ \textcolor{stringliteral}{"{}TRUE"{}});}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ val;}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>\ \textcolor{keyword}{static}\ std::string\ \mbox{\hyperlink{classHoofAux_a5cd96df61c2a62de3e1def3d55dc7e09}{string}}(\textcolor{keyword}{const}\ T\&\ val)}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ std::string\ s;}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(std::is\_same<T,\ bool>::value)}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(val)}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ s\ =\ \textcolor{stringliteral}{"{}TRUE"{}};}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ s\ =\ \textcolor{stringliteral}{"{}FALSE"{}};}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ s\ =\ std::to\_string(val);}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ s;}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::vector<std::string>\ \mbox{\hyperlink{classHoofAux_ad08f3b2586999265f4d26c177f14a403}{join}}(\textcolor{keyword}{const}\ std::vector<std::string>\&\ vec1,}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::vector<std::string>\&\ vec2)}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ std::unordered\_set<std::string>\ unique;}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i=0;\ i<vec1.size();\ i++)}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ unique.insert(vec1[i]);}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i=0;\ i<vec2.size();\ i++)}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ unique.insert(vec2[i]);}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::vector<std::string>(unique.begin(),\ unique.end());}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \}\ }
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::vector<std::string>\ \mbox{\hyperlink{classHoofAux_a0fd68b98ef954b7a56296e72381bcc78}{split}}(\textcolor{keyword}{const}\ std::string\&\ s,\ \textcolor{keyword}{const}\ std::string\&\ toRemove\ =\ \textcolor{stringliteral}{"{}None"{}},}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ toReplace\ =\ \textcolor{stringliteral}{"{}None"{}})}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ std::string\ t\ =\ s;}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ first\ remove\ or\ replace\ }}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(toRemove\ !=\ \textcolor{stringliteral}{"{}None"{}})}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(toReplace\ ==\ \textcolor{stringliteral}{"{}None"{}})}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i=0;\ i<toRemove.length();\ i++)}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ t.erase(std::remove(t.begin(),\ t.end(),\ toRemove[i]),\ t.end());\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i=0;\ i<toRemove.length();\ i++)}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::replace(t.begin(),\ t.end(),\ toRemove[i],\ toReplace[i]);}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00121\ \ \ \ }
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ convert\ to\ a\ vector\ of\ words}}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ std::vector<std::string>\ words;}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ std::stringstream\ ss(t);}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ std::string\ word;}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(ss\ >>\ word)}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ words.push\_back(word);}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ words;\ \ }
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::string\ \mbox{\hyperlink{classHoofAux_acbbadccdbc4d527a3dec6400ac19f996}{trim}}(\textcolor{keyword}{const}\ std::string\&\ s)}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \ std::string\ t\ =\ s;}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ t.erase(0,t.erase(t.find\_last\_not\_of(\textcolor{stringliteral}{"{}\ "{}})+1).find\_first\_not\_of(\textcolor{stringliteral}{"{}\ "{}}));}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ t;}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00142\ \ }
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::string\ \mbox{\hyperlink{classHoofAux_a3a97403c291b44099a743caf51cc17cd}{removeDigits}}(\textcolor{keyword}{const}\ std::string\&\ s)}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \ std::string\ t\ =\ s;}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \ t.erase(remove\_if(t.begin(),\ t.end(),\ [](\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ c)\ \{\ return\ isdigit(c);\}),\ t.end());}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ t;}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ }
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classHoofAux_aff36c6d0be303634c51337dcd1eed380}{find}}(\textcolor{keyword}{const}\ T\&\ el,\ \textcolor{keyword}{const}\ std::vector<T>\&\ vec)\ }
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(std::find(vec.begin(),\ vec.end(),\ el)\ ==\ vec.end())}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00168\ }
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classHoofAux_a98b31d482be558f948873e20795a96b3}{round}}(\textcolor{keywordtype}{double}\ d,\ \textcolor{keywordtype}{double}\ p)}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::round(d/p)*p;\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00179\ }
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classHoofAux_a61e8ea2fdebbb1995dc22a5bbc1bb277}{linspace}}(std::vector<double>\&\ vec,\ \textcolor{keywordtype}{double}\ a,\ \textcolor{keywordtype}{double}\ b,\ \textcolor{keywordtype}{int}\ n)}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(n\ >\ vec.size()\ ||\ n\ <\ 1)}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00191\ }
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ step\ =\ (b-\/a)/(\textcolor{keywordtype}{double})n;}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i=0;\ i<n;\ i++)}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \ \ \ \ vec[i]\ =\ a\ +\ (\textcolor{keywordtype}{double})i*step;}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00196\ }
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classHoofAux_ac6eeceb0467bde761a9de724e262bd9c}{eqDbl}}(\textcolor{keywordtype}{double}\ val1,\ \textcolor{keywordtype}{double}\ val2)}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::abs(val1\ -\/\ val2)\ <=\ \mbox{\hyperlink{classHoofAux_a456e29e979e4f31184493c0cc6213317}{HoofAux::dblEpsilon}};}
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00207\ }
+\DoxyCodeLine{00214\ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classHoofAux_a59bcc0bf98365d8828ade1bbd5c8ff28}{eqInt}}(\textcolor{keywordtype}{double}\ val1,\ \textcolor{keywordtype}{double}\ val2)}
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ val1\ ==\ val2;}
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00218\ }
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classHoofAux_a9ba7aedd72a17703ee1a0750d8dd957b}{replace}}(hoof::vector2D<T>\&\ vec,\ \textcolor{keyword}{const}\ T\&\ condValue,\ \textcolor{keyword}{const}\ T\&\ value)}
+\DoxyCodeLine{00226\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ select\ the\ equality\ fucntion}}
+\DoxyCodeLine{00228\ \ \ \ \ \ \ \ \ \ bool\ (*eqFunc)(double,\ double);}
+\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ \textcolor{keyword}{constexpr}\ (std::is\_same\_v<double,\ T>)}
+\DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ \ \ \ \ eqFunc\ =\ \&\mbox{\hyperlink{classHoofAux_ac6eeceb0467bde761a9de724e262bd9c}{HoofAux::eqDbl}};}
+\DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ \ \ \ \ eqFunc\ =\ \textcolor{keyword}{reinterpret\_cast<}\textcolor{keywordtype}{bool}(*)(\textcolor{keywordtype}{double},\textcolor{keywordtype}{double})\textcolor{keyword}{>}(\mbox{\hyperlink{classHoofAux_a59bcc0bf98365d8828ade1bbd5c8ff28}{eqInt}});}
+\DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00234\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ replace}}
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i=0;\ i<vec.size();\ i++)}
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ j=0;\ j<vec[i].size();\ j++)}
+\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(eqFunc(vec[i][j],\ condValue))}
+\DoxyCodeLine{00240\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ vec[i][j]\ =\ value;}
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00244\ }
+\DoxyCodeLine{00251\ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classHoofAux_a1527f2f1bfac46cdd0a5221897105c0a}{replace}}(hoof::vector3D<T>\&\ vec,\ \textcolor{keyword}{const}\ T\&\ condValue,\ \textcolor{keyword}{const}\ T\&\ value)}
+\DoxyCodeLine{00252\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00253\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ select\ the\ equality\ fucntion}}
+\DoxyCodeLine{00254\ \ \ \ \ \ \ \ \ \ bool\ (*eqFunc)(double,\ double);}
+\DoxyCodeLine{00255\ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ \textcolor{keyword}{constexpr}\ (std::is\_same\_v<double,\ T>)}
+\DoxyCodeLine{00256\ \ \ \ \ \ \ \ \ \ \ \ \ eqFunc\ =\ \&\mbox{\hyperlink{classHoofAux_ac6eeceb0467bde761a9de724e262bd9c}{HoofAux::eqDbl}};}
+\DoxyCodeLine{00257\ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00258\ \ \ \ \ \ \ \ \ \ \ \ \ eqFunc\ =\ \textcolor{keyword}{reinterpret\_cast<}\textcolor{keywordtype}{bool}(*)(\textcolor{keywordtype}{double},\textcolor{keywordtype}{double})\textcolor{keyword}{>}(\mbox{\hyperlink{classHoofAux_a59bcc0bf98365d8828ade1bbd5c8ff28}{eqInt}});}
+\DoxyCodeLine{00259\ }
+\DoxyCodeLine{00260\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ replace}}
+\DoxyCodeLine{00261\ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i=0;\ i<vec.size();\ i++)}
+\DoxyCodeLine{00262\ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00263\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ j=0;\ j<vec[i].size();\ j++)}
+\DoxyCodeLine{00264\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00265\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ k=0;\ k<vec[i][j].size();\ k++)}
+\DoxyCodeLine{00266\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00267\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(eqFunc(vec[i][j][k],\ condValue))}
+\DoxyCodeLine{00268\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ vec[i][j][k]\ =\ value;}
+\DoxyCodeLine{00269\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00270\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00272\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00273\ }
+\DoxyCodeLine{00279\ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classHoofAux_a2a5a4eed662fe7da527877e89e22f6be}{isallnan}}(\textcolor{keyword}{const}\ hoof::vector2D<double>\&\ vec)\ }
+\DoxyCodeLine{00280\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00281\ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i=0;\ i<vec.size();\ i++)}
+\DoxyCodeLine{00282\ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00283\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ j=0;\ j<vec[i].size();\ j++)}
+\DoxyCodeLine{00284\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00285\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!std::isnan(vec[i][j]))}
+\DoxyCodeLine{00286\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00287\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00288\ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00289\ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00290\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00291\ }
+\DoxyCodeLine{00297\ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classHoofAux_a51f74958541fdfeba0e550d310e17379}{isallnan}}(\textcolor{keyword}{const}\ hoof::vector3D<double>\&\ vec)\ }
+\DoxyCodeLine{00298\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00299\ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i=0;\ i<vec.size();\ i++)}
+\DoxyCodeLine{00300\ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00301\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ j=0;\ j<vec[i].size();\ j++)}
+\DoxyCodeLine{00302\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00303\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ k=0;\ k<vec[i][j].size();\ k++)}
+\DoxyCodeLine{00304\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00305\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!std::isnan(vec[i][j][k]))}
+\DoxyCodeLine{00306\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00307\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00308\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00309\ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00310\ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00311\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00312\ }
+\DoxyCodeLine{00318\ \ \ \ \ \ \ \textcolor{keyword}{static}\ hoof::Tuple\ \mbox{\hyperlink{classHoofAux_abdeeee85113798f970ae64d7dd22d1dc}{nanminmax}}(\textcolor{keyword}{const}\ hoof::vector2D<double>\&\ vec)\ }
+\DoxyCodeLine{00319\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00320\ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ min\ =\ std::numeric\_limits<double>::infinity();}
+\DoxyCodeLine{00321\ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ max\ =\ -\/std::numeric\_limits<double>::infinity();}
+\DoxyCodeLine{00322\ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i=0;\ i<vec.size();\ i++)}
+\DoxyCodeLine{00323\ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00324\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ j=0;\ j<vec[i].size();\ j++)}
+\DoxyCodeLine{00325\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00326\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ value\ =\ vec[i][j];}
+\DoxyCodeLine{00327\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!std::isnan(value))}
+\DoxyCodeLine{00328\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00329\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(value\ <\ min)}
+\DoxyCodeLine{00330\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ min\ =\ value;}
+\DoxyCodeLine{00331\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(value\ >\ max)}
+\DoxyCodeLine{00332\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ max\ =\ value;}
+\DoxyCodeLine{00333\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00334\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00335\ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00336\ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(std::isinf(min))}
+\DoxyCodeLine{00337\ \ \ \ \ \ \ \ \ \ \ \ \ min\ =\ hoof::dNaN;}
+\DoxyCodeLine{00338\ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(std::isinf(max))}
+\DoxyCodeLine{00339\ \ \ \ \ \ \ \ \ \ \ \ \ max\ =\ hoof::dNaN;}
+\DoxyCodeLine{00340\ \ \ \ \ \ \ \ \ \ hoof::Tuple\ result\ =\ \{min,\ max\};}
+\DoxyCodeLine{00341\ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ result;}
+\DoxyCodeLine{00342\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00343\ }
+\DoxyCodeLine{00349\ \ \ \ \ \ \ \textcolor{keyword}{static}\ hoof::Tuple\ \mbox{\hyperlink{classHoofAux_a15e9cebca2aab0b4db2abd4aa3932bed}{nanminmax}}(\textcolor{keyword}{const}\ hoof::vector3D<double>\&\ vec)\ }
+\DoxyCodeLine{00350\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00351\ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ min\ =\ std::numeric\_limits<double>::infinity();}
+\DoxyCodeLine{00352\ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ max\ =\ -\/std::numeric\_limits<double>::infinity();}
+\DoxyCodeLine{00353\ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i=0;\ i<vec.size();\ i++)}
+\DoxyCodeLine{00354\ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00355\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ j=0;\ j<vec[i].size();\ j++)}
+\DoxyCodeLine{00356\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00357\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ k=0;\ k<vec[i][j].size();\ k++)}
+\DoxyCodeLine{00358\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00359\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ value\ =\ vec[i][j][k];}
+\DoxyCodeLine{00360\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!std::isnan(value))}
+\DoxyCodeLine{00361\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00362\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(value\ <\ min)}
+\DoxyCodeLine{00363\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ min\ =\ value;}
+\DoxyCodeLine{00364\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(value\ >\ max)}
+\DoxyCodeLine{00365\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ max\ =\ value;}
+\DoxyCodeLine{00366\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00367\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00368\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00369\ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00370\ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(std::isinf(min))}
+\DoxyCodeLine{00371\ \ \ \ \ \ \ \ \ \ \ \ \ min\ =\ hoof::dNaN;}
+\DoxyCodeLine{00372\ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(std::isinf(max))}
+\DoxyCodeLine{00373\ \ \ \ \ \ \ \ \ \ \ \ \ max\ =\ hoof::dNaN;}
+\DoxyCodeLine{00374\ \ \ \ \ \ \ \ \ \ hoof::Tuple\ result\ =\ \{min,\ max\};}
+\DoxyCodeLine{00375\ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ result;}
+\DoxyCodeLine{00376\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00377\ }
+\DoxyCodeLine{00385\ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classHoofAux_a57a68e03f338961934e715bbbf793b2b}{subset}}(\textcolor{keyword}{const}\ hoof::vector3D<double>\&\ vec,}
+\DoxyCodeLine{00386\ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::vector<hoof::Triple>\&\ idxs,\ \textcolor{keywordtype}{double}*\ arr,\ std::size\_t\ size)}
+\DoxyCodeLine{00387\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00388\ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i=0;\ i<size;\ i++)}
+\DoxyCodeLine{00389\ \ \ \ \ \ \ \ \ \ \ \ \ arr[i]\ =\ vec[idxs[i][0]][idxs[i][1]][idxs[i][2]];}
+\DoxyCodeLine{00390\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00391\ \};}
+\DoxyCodeLine{00392\ }
+\DoxyCodeLine{00393\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ HOOFAUX\_GUARD}}
+
+\end{DoxyCode}

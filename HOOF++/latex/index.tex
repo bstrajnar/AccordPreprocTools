@@ -1,0 +1,15 @@
+\chapter{HOOF2 C++ documentation}
+\hypertarget{index}{}\label{index}\index{HOOF2 C++ documentation@{HOOF2 C++ documentation}}
+\begin{DoxyAuthor}{Author}
+Peter Smerkol
+\end{DoxyAuthor}
+An implementation of HOOF2.\+py 1.\+10 in C++\hypertarget{index_req}{}\doxysection{\texorpdfstring{Requirements\+:}{Requirements:}}\label{index_req}
+
+\begin{DoxyItemize}
+\item gcc compiler that supports C++17 (from GCC 7.\+1 on),
+\item gsl library 2.\+7.\+1,
+\item HDF5 library 1.\+10.\+10
+\end{DoxyItemize}\hypertarget{index_comp}{}\doxysection{\texorpdfstring{Compiling\+:}{Compiling:}}\label{index_comp}
+h5c++ -\/o HOOF2 -\/I. Hoof\texorpdfstring{$\ast$}{*}.cpp -\/lgsl HOOF2.\+cpp -\/O2\hypertarget{index_run}{}\doxysection{\texorpdfstring{Running\+:}{Running:}}\label{index_run}
+./\+HOOF2 $<$namelistfile$>$ $<$input folder$>$ $<$output folder$>$\hypertarget{index_other}{}\doxysection{\texorpdfstring{Other\+:}{Other:}}\label{index_other}
+Last five characters of the file name has to contain the radar site name as defined by OPERA 

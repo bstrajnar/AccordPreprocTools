@@ -1,0 +1,426 @@
+\doxysection{Hoof\+Aux Class Reference}
+\hypertarget{classHoofAux}{}\label{classHoofAux}\index{HoofAux@{HoofAux}}
+
+
+Class containing static helper functions used throughout HOOF.  
+
+
+
+
+{\ttfamily \#include $<$Hoof\+Aux.\+h$>$}
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\static T \mbox{\hyperlink{classHoofAux_a47b7292a94d230b3c19166a17a19e6da}{to}} (const std\+::string \&s)
+\begin{DoxyCompactList}\small\item\em Converts a string to type T. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\static std\+::string \mbox{\hyperlink{classHoofAux_a5cd96df61c2a62de3e1def3d55dc7e09}{string}} (const T \&val)
+\begin{DoxyCompactList}\small\item\em Converts type T to a string. \end{DoxyCompactList}\item 
+static std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classHoofAux_ad08f3b2586999265f4d26c177f14a403}{join}} (const std\+::vector$<$ std\+::string $>$ \&vec1, const std\+::vector$<$ std\+::string $>$ \&vec2)
+\begin{DoxyCompactList}\small\item\em Joins two string vector into one, keeping only unique values from each. \end{DoxyCompactList}\item 
+static std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classHoofAux_a0fd68b98ef954b7a56296e72381bcc78}{split}} (const std\+::string \&s, const std\+::string \&to\+Remove="{}None"{}, const std\+::string \&to\+Replace="{}None"{})
+\begin{DoxyCompactList}\small\item\em Optionally removes and/or replaces characters, then splits a string by whitespaces. \end{DoxyCompactList}\item 
+static std\+::string \mbox{\hyperlink{classHoofAux_acbbadccdbc4d527a3dec6400ac19f996}{trim}} (const std\+::string \&s)
+\begin{DoxyCompactList}\small\item\em Trims a string of whitespaces and returns a new trimmed string. \end{DoxyCompactList}\item 
+static std\+::string \mbox{\hyperlink{classHoofAux_a3a97403c291b44099a743caf51cc17cd}{remove\+Digits}} (const std\+::string \&s)
+\begin{DoxyCompactList}\small\item\em Removes digits from a string. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\static bool \mbox{\hyperlink{classHoofAux_aff36c6d0be303634c51337dcd1eed380}{find}} (const T \&el, const std\+::vector$<$ T $>$ \&vec)
+\begin{DoxyCompactList}\small\item\em Finds an element in a vector of type T. \end{DoxyCompactList}\item 
+static double \mbox{\hyperlink{classHoofAux_a98b31d482be558f948873e20795a96b3}{round}} (double d, double p)
+\begin{DoxyCompactList}\small\item\em Rounds a double to a precision. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classHoofAux_a61e8ea2fdebbb1995dc22a5bbc1bb277}{linspace}} (std\+::vector$<$ double $>$ \&vec, double a, double b, int n)
+\begin{DoxyCompactList}\small\item\em Generates n evenly spaced values on interval \mbox{[}a,b) and fills a vector with them. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classHoofAux_ac6eeceb0467bde761a9de724e262bd9c}{eq\+Dbl}} (double val1, double val2)
+\begin{DoxyCompactList}\small\item\em Compare two doubles for equality. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classHoofAux_a59bcc0bf98365d8828ade1bbd5c8ff28}{eq\+Int}} (double val1, double val2)
+\begin{DoxyCompactList}\small\item\em Compare two integers for equality. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\static void \mbox{\hyperlink{classHoofAux_a9ba7aedd72a17703ee1a0750d8dd957b}{replace}} (hoof\+::vector2D$<$ T $>$ \&vec, const T \&cond\+Value, const T \&value)
+\begin{DoxyCompactList}\small\item\em Replaces values equaling a value with a value in a 2D vector of type T. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\static void \mbox{\hyperlink{classHoofAux_a1527f2f1bfac46cdd0a5221897105c0a}{replace}} (hoof\+::vector3D$<$ T $>$ \&vec, const T \&cond\+Value, const T \&value)
+\begin{DoxyCompactList}\small\item\em Replaces values equaling a value with a value in a 3D vector of type T. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classHoofAux_a2a5a4eed662fe7da527877e89e22f6be}{isallnan}} (const hoof\+::vector2D$<$ double $>$ \&vec)
+\begin{DoxyCompactList}\small\item\em Checks if all values in a 2D vector of doubles are NaN. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classHoofAux_a51f74958541fdfeba0e550d310e17379}{isallnan}} (const hoof\+::vector3D$<$ double $>$ \&vec)
+\begin{DoxyCompactList}\small\item\em Checks if all values in a 3D vector of doubles are NaN. \end{DoxyCompactList}\item 
+static hoof\+::\+Tuple \mbox{\hyperlink{classHoofAux_abdeeee85113798f970ae64d7dd22d1dc}{nanminmax}} (const hoof\+::vector2D$<$ double $>$ \&vec)
+\begin{DoxyCompactList}\small\item\em Finds minimum and maximum values in a 2D vector of doubles that can contain Na\+Ns. \end{DoxyCompactList}\item 
+static hoof\+::\+Tuple \mbox{\hyperlink{classHoofAux_a15e9cebca2aab0b4db2abd4aa3932bed}{nanminmax}} (const hoof\+::vector3D$<$ double $>$ \&vec)
+\begin{DoxyCompactList}\small\item\em Finds minimum and maximum values in a 3D vector of doubles that can contain Na\+Ns. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classHoofAux_a57a68e03f338961934e715bbbf793b2b}{subset}} (const hoof\+::vector3D$<$ double $>$ \&vec, const std\+::vector$<$ hoof\+::\+Triple $>$ \&idxs, double \texorpdfstring{$\ast$}{*}arr, std\+::size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Fills an array with subset of values from a 3D double vector, where the subset indexes are given in a vector$<$\+Triple$>$. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classHoofAux_a456e29e979e4f31184493c0cc6213317}\label{classHoofAux_a456e29e979e4f31184493c0cc6213317} 
+static const double {\bfseries dbl\+Epsilon} = 0.\+000000000001
+\begin{DoxyCompactList}\small\item\em Epsilon for comparing double values. \end{DoxyCompactList}\item 
+\Hypertarget{classHoofAux_af8a70b05b97f8ef7aefbb268df531580}\label{classHoofAux_af8a70b05b97f8ef7aefbb268df531580} 
+static const double {\bfseries earth\+Radius} = 6371200.\+0
+\begin{DoxyCompactList}\small\item\em Earth radius in meters. \end{DoxyCompactList}\item 
+\Hypertarget{classHoofAux_a3863e06715a5367bef1fc688d0d08fc7}\label{classHoofAux_a3863e06715a5367bef1fc688d0d08fc7} 
+static const double {\bfseries eq\+Earth\+Factor} = 4.\+0/3.\+0
+\begin{DoxyCompactList}\small\item\em Factor in equivalent Earth calculation. \end{DoxyCompactList}\item 
+\Hypertarget{classHoofAux_abb592453794497978999f9c03cde18b9}\label{classHoofAux_abb592453794497978999f9c03cde18b9} 
+static const double {\bfseries Pi} = 3.\+14159265358979323846
+\begin{DoxyCompactList}\small\item\em Pi. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class containing static helper functions used throughout HOOF. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classHoofAux_ac6eeceb0467bde761a9de724e262bd9c}\label{classHoofAux_ac6eeceb0467bde761a9de724e262bd9c} 
+\index{HoofAux@{HoofAux}!eqDbl@{eqDbl}}
+\index{eqDbl@{eqDbl}!HoofAux@{HoofAux}}
+\doxysubsubsection{\texorpdfstring{eqDbl()}{eqDbl()}}
+{\footnotesize\ttfamily static bool Hoof\+Aux\+::eq\+Dbl (\begin{DoxyParamCaption}\item[{double}]{val1,  }\item[{double}]{val2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Compare two doubles for equality. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val1} & First double to compare. \\
+\hline
+{\em val2} & Second double to compare. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if they are equal up to a small epsilon, false if not. 
+\end{DoxyReturn}
+\Hypertarget{classHoofAux_a59bcc0bf98365d8828ade1bbd5c8ff28}\label{classHoofAux_a59bcc0bf98365d8828ade1bbd5c8ff28} 
+\index{HoofAux@{HoofAux}!eqInt@{eqInt}}
+\index{eqInt@{eqInt}!HoofAux@{HoofAux}}
+\doxysubsubsection{\texorpdfstring{eqInt()}{eqInt()}}
+{\footnotesize\ttfamily static bool Hoof\+Aux\+::eq\+Int (\begin{DoxyParamCaption}\item[{double}]{val1,  }\item[{double}]{val2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Compare two integers for equality. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val1} & First integer to compare. \\
+\hline
+{\em val2} & Second integer to compare. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if they are equal, false if not. 
+\end{DoxyReturn}
+\Hypertarget{classHoofAux_aff36c6d0be303634c51337dcd1eed380}\label{classHoofAux_aff36c6d0be303634c51337dcd1eed380} 
+\index{HoofAux@{HoofAux}!find@{find}}
+\index{find@{find}!HoofAux@{HoofAux}}
+\doxysubsubsection{\texorpdfstring{find()}{find()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static bool Hoof\+Aux\+::find (\begin{DoxyParamCaption}\item[{const T \&}]{el,  }\item[{const std\+::vector$<$ T $>$ \&}]{vec }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Finds an element in a vector of type T. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em el} & Element to find. \\
+\hline
+{\em vec} & Vector in which to find the element. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if element is found, false if not. 
+\end{DoxyReturn}
+\Hypertarget{classHoofAux_a2a5a4eed662fe7da527877e89e22f6be}\label{classHoofAux_a2a5a4eed662fe7da527877e89e22f6be} 
+\index{HoofAux@{HoofAux}!isallnan@{isallnan}}
+\index{isallnan@{isallnan}!HoofAux@{HoofAux}}
+\doxysubsubsection{\texorpdfstring{isallnan()}{isallnan()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static bool Hoof\+Aux\+::isallnan (\begin{DoxyParamCaption}\item[{const hoof\+::vector2D$<$ double $>$ \&}]{vec }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Checks if all values in a 2D vector of doubles are NaN. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vec} & The 2D vector to check. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if all values are NaN, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{classHoofAux_a51f74958541fdfeba0e550d310e17379}\label{classHoofAux_a51f74958541fdfeba0e550d310e17379} 
+\index{HoofAux@{HoofAux}!isallnan@{isallnan}}
+\index{isallnan@{isallnan}!HoofAux@{HoofAux}}
+\doxysubsubsection{\texorpdfstring{isallnan()}{isallnan()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static bool Hoof\+Aux\+::isallnan (\begin{DoxyParamCaption}\item[{const hoof\+::vector3D$<$ double $>$ \&}]{vec }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Checks if all values in a 3D vector of doubles are NaN. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vec} & The 3D vector to check. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if all values are NaN, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{classHoofAux_ad08f3b2586999265f4d26c177f14a403}\label{classHoofAux_ad08f3b2586999265f4d26c177f14a403} 
+\index{HoofAux@{HoofAux}!join@{join}}
+\index{join@{join}!HoofAux@{HoofAux}}
+\doxysubsubsection{\texorpdfstring{join()}{join()}}
+{\footnotesize\ttfamily static std\+::vector$<$ std\+::string $>$ Hoof\+Aux\+::join (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::string $>$ \&}]{vec1,  }\item[{const std\+::vector$<$ std\+::string $>$ \&}]{vec2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Joins two string vector into one, keeping only unique values from each. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vec1} & First vector to join. \\
+\hline
+{\em vec2} & Second vector to join. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The joined vector. ~\newline
+ 
+\end{DoxyReturn}
+\Hypertarget{classHoofAux_a61e8ea2fdebbb1995dc22a5bbc1bb277}\label{classHoofAux_a61e8ea2fdebbb1995dc22a5bbc1bb277} 
+\index{HoofAux@{HoofAux}!linspace@{linspace}}
+\index{linspace@{linspace}!HoofAux@{HoofAux}}
+\doxysubsubsection{\texorpdfstring{linspace()}{linspace()}}
+{\footnotesize\ttfamily static void Hoof\+Aux\+::linspace (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$ \&}]{vec,  }\item[{double}]{a,  }\item[{double}]{b,  }\item[{int}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Generates n evenly spaced values on interval \mbox{[}a,b) and fills a vector with them. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vec} & The vector to fill. \\
+\hline
+{\em a} & Start of the interval. \\
+\hline
+{\em b} & Open end of the interval. \\
+\hline
+{\em n} & Number of values in vector to fill. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classHoofAux_abdeeee85113798f970ae64d7dd22d1dc}\label{classHoofAux_abdeeee85113798f970ae64d7dd22d1dc} 
+\index{HoofAux@{HoofAux}!nanminmax@{nanminmax}}
+\index{nanminmax@{nanminmax}!HoofAux@{HoofAux}}
+\doxysubsubsection{\texorpdfstring{nanminmax()}{nanminmax()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static hoof\+::\+Tuple Hoof\+Aux\+::nanminmax (\begin{DoxyParamCaption}\item[{const hoof\+::vector2D$<$ double $>$ \&}]{vec }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Finds minimum and maximum values in a 2D vector of doubles that can contain Na\+Ns. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vec} & The 2D vector to check. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A (min, max) tuple, which is NaN if all are Na\+Ns. 
+\end{DoxyReturn}
+\Hypertarget{classHoofAux_a15e9cebca2aab0b4db2abd4aa3932bed}\label{classHoofAux_a15e9cebca2aab0b4db2abd4aa3932bed} 
+\index{HoofAux@{HoofAux}!nanminmax@{nanminmax}}
+\index{nanminmax@{nanminmax}!HoofAux@{HoofAux}}
+\doxysubsubsection{\texorpdfstring{nanminmax()}{nanminmax()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static hoof\+::\+Tuple Hoof\+Aux\+::nanminmax (\begin{DoxyParamCaption}\item[{const hoof\+::vector3D$<$ double $>$ \&}]{vec }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Finds minimum and maximum values in a 3D vector of doubles that can contain Na\+Ns. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vec} & The 3D vector to check. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A (min, max) tuple, which is NaN if all are Na\+Ns. 
+\end{DoxyReturn}
+\Hypertarget{classHoofAux_a3a97403c291b44099a743caf51cc17cd}\label{classHoofAux_a3a97403c291b44099a743caf51cc17cd} 
+\index{HoofAux@{HoofAux}!removeDigits@{removeDigits}}
+\index{removeDigits@{removeDigits}!HoofAux@{HoofAux}}
+\doxysubsubsection{\texorpdfstring{removeDigits()}{removeDigits()}}
+{\footnotesize\ttfamily static std\+::string Hoof\+Aux\+::remove\+Digits (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Removes digits from a string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & The string from which to remove digits. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The string with removed digits. 
+\end{DoxyReturn}
+\Hypertarget{classHoofAux_a9ba7aedd72a17703ee1a0750d8dd957b}\label{classHoofAux_a9ba7aedd72a17703ee1a0750d8dd957b} 
+\index{HoofAux@{HoofAux}!replace@{replace}}
+\index{replace@{replace}!HoofAux@{HoofAux}}
+\doxysubsubsection{\texorpdfstring{replace()}{replace()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static void Hoof\+Aux\+::replace (\begin{DoxyParamCaption}\item[{hoof\+::vector2D$<$ T $>$ \&}]{vec,  }\item[{const T \&}]{cond\+Value,  }\item[{const T \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Replaces values equaling a value with a value in a 2D vector of type T. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vec} & Vector in which to replace values. \\
+\hline
+{\em cond} & Condition for replacing. \\
+\hline
+{\em value} & Value to replace. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classHoofAux_a1527f2f1bfac46cdd0a5221897105c0a}\label{classHoofAux_a1527f2f1bfac46cdd0a5221897105c0a} 
+\index{HoofAux@{HoofAux}!replace@{replace}}
+\index{replace@{replace}!HoofAux@{HoofAux}}
+\doxysubsubsection{\texorpdfstring{replace()}{replace()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static void Hoof\+Aux\+::replace (\begin{DoxyParamCaption}\item[{hoof\+::vector3D$<$ T $>$ \&}]{vec,  }\item[{const T \&}]{cond\+Value,  }\item[{const T \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Replaces values equaling a value with a value in a 3D vector of type T. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vec} & Vector in which to replace values. \\
+\hline
+{\em cond} & Condition for replacing. \\
+\hline
+{\em value} & Value to replace. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classHoofAux_a98b31d482be558f948873e20795a96b3}\label{classHoofAux_a98b31d482be558f948873e20795a96b3} 
+\index{HoofAux@{HoofAux}!round@{round}}
+\index{round@{round}!HoofAux@{HoofAux}}
+\doxysubsubsection{\texorpdfstring{round()}{round()}}
+{\footnotesize\ttfamily static double Hoof\+Aux\+::round (\begin{DoxyParamCaption}\item[{double}]{d,  }\item[{double}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Rounds a double to a precision. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em d} & Double to round. \\
+\hline
+{\em p} & The precision to round to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The rounded double. 
+\end{DoxyReturn}
+\Hypertarget{classHoofAux_a0fd68b98ef954b7a56296e72381bcc78}\label{classHoofAux_a0fd68b98ef954b7a56296e72381bcc78} 
+\index{HoofAux@{HoofAux}!split@{split}}
+\index{split@{split}!HoofAux@{HoofAux}}
+\doxysubsubsection{\texorpdfstring{split()}{split()}}
+{\footnotesize\ttfamily static std\+::vector$<$ std\+::string $>$ Hoof\+Aux\+::split (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{s,  }\item[{const std\+::string \&}]{to\+Remove = {\ttfamily "{}None"{}},  }\item[{const std\+::string \&}]{to\+Replace = {\ttfamily "{}None"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Optionally removes and/or replaces characters, then splits a string by whitespaces. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & String to split. \\
+\hline
+{\em to\+Remove} & A string of characters to remove or replace. If \textquotesingle{}None\textquotesingle{}, no characters get removed or replaced. \\
+\hline
+{\em to\+Replace} & A string of characters to replace the characters in\\
+\hline
+{\em to\+Remove.} & If \textquotesingle{}None\textquotesingle{}, characters are not replaced. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classHoofAux_a5cd96df61c2a62de3e1def3d55dc7e09}\label{classHoofAux_a5cd96df61c2a62de3e1def3d55dc7e09} 
+\index{HoofAux@{HoofAux}!string@{string}}
+\index{string@{string}!HoofAux@{HoofAux}}
+\doxysubsubsection{\texorpdfstring{string()}{string()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static std\+::string Hoof\+Aux\+::string (\begin{DoxyParamCaption}\item[{const T \&}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Converts type T to a string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & Value to convert. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The converted string. 
+\end{DoxyReturn}
+\Hypertarget{classHoofAux_a57a68e03f338961934e715bbbf793b2b}\label{classHoofAux_a57a68e03f338961934e715bbbf793b2b} 
+\index{HoofAux@{HoofAux}!subset@{subset}}
+\index{subset@{subset}!HoofAux@{HoofAux}}
+\doxysubsubsection{\texorpdfstring{subset()}{subset()}}
+{\footnotesize\ttfamily static void Hoof\+Aux\+::subset (\begin{DoxyParamCaption}\item[{const hoof\+::vector3D$<$ double $>$ \&}]{vec,  }\item[{const std\+::vector$<$ hoof\+::\+Triple $>$ \&}]{idxs,  }\item[{double \texorpdfstring{$\ast$}{*}}]{arr,  }\item[{std\+::size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Fills an array with subset of values from a 3D double vector, where the subset indexes are given in a vector$<$\+Triple$>$. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vec} & The 3D vector from which to get the values. \\
+\hline
+{\em idxs} & The vector$<$\+Triple$>$ from which to get the indexes for the subset. \\
+\hline
+{\em arr} & The array to fill with the subset. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classHoofAux_a47b7292a94d230b3c19166a17a19e6da}\label{classHoofAux_a47b7292a94d230b3c19166a17a19e6da} 
+\index{HoofAux@{HoofAux}!to@{to}}
+\index{to@{to}!HoofAux@{HoofAux}}
+\doxysubsubsection{\texorpdfstring{to()}{to()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static T Hoof\+Aux\+::to (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Converts a string to type T. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & String to convert. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The converted value. 
+\end{DoxyReturn}
+\Hypertarget{classHoofAux_acbbadccdbc4d527a3dec6400ac19f996}\label{classHoofAux_acbbadccdbc4d527a3dec6400ac19f996} 
+\index{HoofAux@{HoofAux}!trim@{trim}}
+\index{trim@{trim}!HoofAux@{HoofAux}}
+\doxysubsubsection{\texorpdfstring{trim()}{trim()}}
+{\footnotesize\ttfamily static std\+::string Hoof\+Aux\+::trim (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Trims a string of whitespaces and returns a new trimmed string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & String to trim. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The trimmed string. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{HoofAux_8h}{Hoof\+Aux.\+h}}\item 
+\mbox{\hyperlink{HoofAux_8cpp}{Hoof\+Aux.\+cpp}}\end{DoxyCompactItemize}

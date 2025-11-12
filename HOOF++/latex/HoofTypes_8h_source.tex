@@ -1,0 +1,41 @@
+\doxysection{Hoof\+Types.\+h}
+\hypertarget{HoofTypes_8h_source}{}\label{HoofTypes_8h_source}\mbox{\hyperlink{HoofTypes_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#ifndef\ HOOFTYPES\_GUARD}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ HOOFTYPES\_GUARD}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <array>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <chrono>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <limits>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{namespace\ }hoof}
+\DoxyCodeLine{00018\ \{}
+\DoxyCodeLine{00019\ \ \ \ \textcolor{comment}{//\ shorthands\ for\ 2D\ and\ 3D\ vectors\ of\ type\ T}}
+\DoxyCodeLine{00020\ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>\ \textcolor{keyword}{using\ }vector2D\ =\ std::vector<std::vector<T>>;}
+\DoxyCodeLine{00021\ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>\ \textcolor{keyword}{using\ }vector3D\ =\ std::vector<std::vector<std::vector<T>>>;}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \textcolor{comment}{//\ shorthand\ for\ time\ related\ types}}
+\DoxyCodeLine{00024\ \ \ \ \textcolor{keyword}{using\ }Clock\ =\ std::chrono::high\_resolution\_clock;}
+\DoxyCodeLine{00025\ \ \ \ \textcolor{keyword}{using\ }Time\ =\ std::chrono::time\_point<Clock>;}
+\DoxyCodeLine{00026\ \ \ \ \textcolor{keyword}{using\ }Ms\ =\ std::chrono::milliseconds;}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \textcolor{comment}{//\ shorthands\ for\ NaN\ values}}
+\DoxyCodeLine{00029\ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{double}\ dNaN\ =\ std::numeric\_limits<double>::quiet\_NaN();}
+\DoxyCodeLine{00030\ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{int}\ iNaN\ =\ std::numeric\_limits<int>::quiet\_NaN();}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \textcolor{comment}{//\ shorthand\ for\ a\ dictionary\ of\ vectors\ of\ objects\ of\ type\ T}}
+\DoxyCodeLine{00033\ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>\ \textcolor{keyword}{using\ }VecDict\ =\ std::map<std::string,\ std::vector<T>>;}
+\DoxyCodeLine{00034\ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>\ \textcolor{keyword}{using\ }VecDictEl\ =\ std::pair<std::string,std::vector<T>>;}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \textcolor{comment}{//\ shorthand\ for\ a\ tuple\ and\ triple,\ represented\ by\ an\ array<double,\ 2>\ and\ array<int,3>}}
+\DoxyCodeLine{00037\ \ \ \ \textcolor{keyword}{using\ }Tuple\ =\ std::array<double,\ 2>;}
+\DoxyCodeLine{00038\ \ \ \ \textcolor{keyword}{using\ }Triple\ =\ std::array<int,\ 3>;}
+\DoxyCodeLine{00039\ \}}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ HOOFTYPES\_GUARD}}
+
+\end{DoxyCode}

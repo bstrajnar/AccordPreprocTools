@@ -1,0 +1,74 @@
+\doxysection{Hoof\+Types.\+h File Reference}
+\hypertarget{HoofTypes_8h}{}\label{HoofTypes_8h}\index{HoofTypes.h@{HoofTypes.h}}
+
+
+Contains a namespace with shorthand aliases for types used throughout HOOF.  
+
+
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$array$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$limits$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+Include dependency graph for Hoof\+Types.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{HoofTypes_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{HoofTypes_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{HoofTypes_8h_a86eab45348380063d0716417327049bb}\label{HoofTypes_8h_a86eab45348380063d0716417327049bb} 
+{\footnotesize template$<$typename T $>$ }\\using {\bfseries hoof\+::vector2D} = std\+::vector$<$ std\+::vector$<$ T $>$ $>$
+\item 
+\Hypertarget{HoofTypes_8h_a5d3f509334767874dde62eb32c15bdd8}\label{HoofTypes_8h_a5d3f509334767874dde62eb32c15bdd8} 
+{\footnotesize template$<$typename T $>$ }\\using {\bfseries hoof\+::vector3D} = std\+::vector$<$ std\+::vector$<$ std\+::vector$<$ T $>$ $>$ $>$
+\item 
+\Hypertarget{HoofTypes_8h_a4a7f5bec7d760a2566339467703feb10}\label{HoofTypes_8h_a4a7f5bec7d760a2566339467703feb10} 
+using {\bfseries hoof\+::\+Clock} = std\+::chrono\+::high\+\_\+resolution\+\_\+clock
+\item 
+\Hypertarget{HoofTypes_8h_aab49c17e6cb254bfdcd3d6a1bd2329c8}\label{HoofTypes_8h_aab49c17e6cb254bfdcd3d6a1bd2329c8} 
+using {\bfseries hoof\+::\+Time} = std\+::chrono\+::time\+\_\+point$<$ Clock $>$
+\item 
+\Hypertarget{HoofTypes_8h_a0e1969d50cf8e651114a1ca26a2e9fa2}\label{HoofTypes_8h_a0e1969d50cf8e651114a1ca26a2e9fa2} 
+using {\bfseries hoof\+::\+Ms} = std\+::chrono\+::milliseconds
+\item 
+\Hypertarget{HoofTypes_8h_ac1e4b43bf0f04b31219e11c4df90629a}\label{HoofTypes_8h_ac1e4b43bf0f04b31219e11c4df90629a} 
+{\footnotesize template$<$typename T $>$ }\\using {\bfseries hoof\+::\+Vec\+Dict} = std\+::map$<$ std\+::string, std\+::vector$<$ T $>$ $>$
+\item 
+\Hypertarget{HoofTypes_8h_a16f6bac151fd0679dfe91f8c0f669384}\label{HoofTypes_8h_a16f6bac151fd0679dfe91f8c0f669384} 
+{\footnotesize template$<$typename T $>$ }\\using {\bfseries hoof\+::\+Vec\+Dict\+El} = std\+::pair$<$ std\+::string, std\+::vector$<$ T $>$ $>$
+\item 
+\Hypertarget{HoofTypes_8h_a4e16b93ee0073f7a81ae9819e9ed6ac0}\label{HoofTypes_8h_a4e16b93ee0073f7a81ae9819e9ed6ac0} 
+using {\bfseries hoof\+::\+Tuple} = std\+::array$<$ double, 2 $>$
+\item 
+\Hypertarget{HoofTypes_8h_ac2dd0229c4071645bb66533af2439142}\label{HoofTypes_8h_ac2dd0229c4071645bb66533af2439142} 
+using {\bfseries hoof\+::\+Triple} = std\+::array$<$ int, 3 $>$
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{HoofTypes_8h_abfc7570e8ee5471b7311ff505a0d669c}\label{HoofTypes_8h_abfc7570e8ee5471b7311ff505a0d669c} 
+constexpr double {\bfseries hoof\+::d\+NaN} = std\+::numeric\+\_\+limits$<$double$>$\+::quiet\+\_\+\+NaN()
+\item 
+\Hypertarget{HoofTypes_8h_a87489cd95feaedc55fe802af7e7cb7a6}\label{HoofTypes_8h_a87489cd95feaedc55fe802af7e7cb7a6} 
+constexpr int {\bfseries hoof\+::i\+NaN} = std\+::numeric\+\_\+limits$<$int$>$\+::quiet\+\_\+\+NaN()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contains a namespace with shorthand aliases for types used throughout HOOF. 
+
+\begin{DoxyAuthor}{Author}
+Peter Smerkol 
+\end{DoxyAuthor}

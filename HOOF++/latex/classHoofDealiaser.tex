@@ -1,0 +1,102 @@
+\doxysection{Hoof\+Dealiaser Class Reference}
+\hypertarget{classHoofDealiaser}{}\label{classHoofDealiaser}\index{HoofDealiaser@{HoofDealiaser}}
+
+
+Worker object that dealiases VRAD measurements.  
+
+
+
+
+{\ttfamily \#include $<$Hoof\+Dealiaser.\+h$>$}
+
+
+
+Inheritance diagram for Hoof\+Dealiaser\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=159pt]{classHoofDealiaser__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Hoof\+Dealiaser\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=187pt]{classHoofDealiaser__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classHoofDealiaser_a01752cf39153e23386ed690d7da183be}{Hoof\+Dealiaser}} (\mbox{\hyperlink{structHoofData}{Hoof\+Data}} \&data, \mbox{\hyperlink{classHoofH5File}{Hoof\+H5\+File}} \&out\+File)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\Hypertarget{classHoofDealiaser_a521624514f8d9e80cb6e109fe2482fb4}\label{classHoofDealiaser_a521624514f8d9e80cb6e109fe2482fb4} 
+void {\bfseries check\+Data} ()
+\begin{DoxyCompactList}\small\item\em Checks VRAD data if it exists and is not NaN everywhere. \end{DoxyCompactList}\item 
+\Hypertarget{classHoofDealiaser_abd15749fddfe3252137707205067a461}\label{classHoofDealiaser_abd15749fddfe3252137707205067a461} 
+void {\bfseries calculate\+Wind\+Model\+Qtys} ()
+\begin{DoxyCompactList}\small\item\em Calculates quantities used in minimzation to get the wind model. \end{DoxyCompactList}\item 
+\Hypertarget{classHoofDealiaser_a36796b2e1145ff8408ecd8fa82940ce5}\label{classHoofDealiaser_a36796b2e1145ff8408ecd8fa82940ce5} 
+void {\bfseries determine\+Height\+Sectors} ()
+\begin{DoxyCompactList}\small\item\em Determines the height sectors in which to run the wind model. \end{DoxyCompactList}\item 
+\Hypertarget{classHoofDealiaser_a88817765118ee35e5929e1f711566d2a}\label{classHoofDealiaser_a88817765118ee35e5929e1f711566d2a} 
+void {\bfseries calculate\+Wind\+Models} ()
+\begin{DoxyCompactList}\small\item\em Calculates wind models for all height sectors. \end{DoxyCompactList}\item 
+\Hypertarget{classHoofDealiaser_ac2cd37467d9c1266f29248429e281098}\label{classHoofDealiaser_ac2cd37467d9c1266f29248429e281098} 
+void {\bfseries dealias} ()
+\begin{DoxyCompactList}\small\item\em Dealiases. \end{DoxyCompactList}\item 
+\Hypertarget{classHoofDealiaser_a042ef2a9b183244dbcec8c2dbe5a961d}\label{classHoofDealiaser_a042ef2a9b183244dbcec8c2dbe5a961d} 
+void {\bfseries write} ()
+\begin{DoxyCompactList}\small\item\em Writes dealiased data to the VRAD data group. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classHoofWorker}{Hoof\+Worker}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Hoof\+Worker} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classHoofWorker_a80533a89f2f0a830849a9e9b1bdc1fce}{warning}} (const std\+::string \&warn)
+\begin{DoxyCompactList}\small\item\em Adds a warning. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classHoofWorker_af98354e13b34da2bcaafb694c96c2f30}{error}} (const std\+::string \&err)
+\begin{DoxyCompactList}\small\item\em Adds an error. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classHoofWorker_a319c5550fb1843e1f8ea2a54ef2247dc}{output}} (std\+::ofstream \&logfile)
+\begin{DoxyCompactList}\small\item\em Outputs warnings and/or errors to console and/or log. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{classHoofWorker}{Hoof\+Worker}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string {\bfseries class\+Message}
+\begin{DoxyCompactList}\small\item\em String that gets added at the beginning of warnings and errors. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ {\bfseries warnings}
+\begin{DoxyCompactList}\small\item\em Generated warning texts. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ {\bfseries errors}
+\begin{DoxyCompactList}\small\item\em Generated error texts. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Worker object that dealiases VRAD measurements. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classHoofDealiaser_a01752cf39153e23386ed690d7da183be}\label{classHoofDealiaser_a01752cf39153e23386ed690d7da183be} 
+\index{HoofDealiaser@{HoofDealiaser}!HoofDealiaser@{HoofDealiaser}}
+\index{HoofDealiaser@{HoofDealiaser}!HoofDealiaser@{HoofDealiaser}}
+\doxysubsubsection{\texorpdfstring{HoofDealiaser()}{HoofDealiaser()}}
+{\footnotesize\ttfamily Hoof\+Dealiaser\+::\+Hoof\+Dealiaser (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structHoofData}{Hoof\+Data}} \&}]{data,  }\item[{\mbox{\hyperlink{classHoofH5File}{Hoof\+H5\+File}} \&}]{out\+File }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & A \doxylink{structHoofData}{Hoof\+Data} object to fill to be used later in dealiasing and superobing. \\
+\hline
+{\em out\+File} & The output file. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{HoofDealiaser_8h}{Hoof\+Dealiaser.\+h}}\item 
+\mbox{\hyperlink{HoofDealiaser_8cpp}{Hoof\+Dealiaser.\+cpp}}\end{DoxyCompactItemize}

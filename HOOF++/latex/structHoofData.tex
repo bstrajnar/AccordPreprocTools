@@ -1,0 +1,67 @@
+\doxysection{Hoof\+Data Struct Reference}
+\hypertarget{structHoofData}{}\label{structHoofData}\index{HoofData@{HoofData}}
+
+
+Struct that holds all data that needs to be transferred between worker objects.  
+
+
+
+
+{\ttfamily \#include $<$Hoof\+Data.\+h$>$}
+
+
+
+Collaboration diagram for Hoof\+Data\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{structHoofData__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structHoofData_acb0a472f25f555c3ce57a73d020fd4cd}\label{structHoofData_acb0a472f25f555c3ce57a73d020fd4cd} 
+std\+::string {\bfseries site}
+\begin{DoxyCompactList}\small\item\em Radar site taken from the OPERA filename. \end{DoxyCompactList}\item 
+\Hypertarget{structHoofData_a6bd481c91f6e26c1f631d557e540b9e1}\label{structHoofData_a6bd481c91f6e26c1f631d557e540b9e1} 
+double {\bfseries height}
+\begin{DoxyCompactList}\small\item\em Radar height in meters. \end{DoxyCompactList}\item 
+\Hypertarget{structHoofData_ae4626c3c2fcfd8593518d0a3c8a868b6}\label{structHoofData_ae4626c3c2fcfd8593518d0a3c8a868b6} 
+\mbox{\hyperlink{structHoofMeasurement}{Hoof\+Measurement}} {\bfseries dbz}
+\begin{DoxyCompactList}\small\item\em All data from DBZ measurements. \end{DoxyCompactList}\item 
+\Hypertarget{structHoofData_adda2728e950e5d6630ccbff46e592dc1}\label{structHoofData_adda2728e950e5d6630ccbff46e592dc1} 
+\mbox{\hyperlink{structHoofMeasurement}{Hoof\+Measurement}} {\bfseries vrad}
+\begin{DoxyCompactList}\small\item\em All VRAD measurements. \end{DoxyCompactList}\item 
+\Hypertarget{structHoofData_aa5a53976740b5919808d7256345f434e}\label{structHoofData_aa5a53976740b5919808d7256345f434e} 
+std\+::vector$<$ double $>$ {\bfseries z\+Starts}
+\begin{DoxyCompactList}\small\item\em Start heights of height sectors in dealiasing. \end{DoxyCompactList}\item 
+\Hypertarget{structHoofData_a0099b47e2a7ae384e313e7408a2b1d15}\label{structHoofData_a0099b47e2a7ae384e313e7408a2b1d15} 
+std\+::vector$<$ double $>$ {\bfseries z\+Ends}
+\begin{DoxyCompactList}\small\item\em End heights of height sectors in dealiasing. \end{DoxyCompactList}\item 
+\Hypertarget{structHoofData_aeb209478f3c13c847e8bf772073bc1b7}\label{structHoofData_aeb209478f3c13c847e8bf772073bc1b7} 
+hoof\+::vector2D$<$ hoof\+::\+Triple $>$ {\bfseries z\+Idxs}
+\begin{DoxyCompactList}\small\item\em Array of (el, az, r) indexes for each height sector that are good for dealiasing. \end{DoxyCompactList}\item 
+\Hypertarget{structHoofData_a0fefae328772c3e7ea33250a6829f2b7}\label{structHoofData_a0fefae328772c3e7ea33250a6829f2b7} 
+hoof\+::vector3D$<$ double $>$ {\bfseries w\+Models}
+\begin{DoxyCompactList}\small\item\em Values of dealiasing wind model for all (el, az, r). \end{DoxyCompactList}\item 
+\Hypertarget{structHoofData_abc1973bb2f8b9f3ba645dc1205193340}\label{structHoofData_abc1973bb2f8b9f3ba645dc1205193340} 
+hoof\+::vector3D$<$ int $>$ {\bfseries ns}
+\begin{DoxyCompactList}\small\item\em Deailiasing Nyquist multipliers for all (el, az, r). \end{DoxyCompactList}\item 
+\Hypertarget{structHoofData_ac73bf94cfc249b778c001391a7f7f083}\label{structHoofData_ac73bf94cfc249b778c001391a7f7f083} 
+hoof\+::vector3D$<$ double $>$ {\bfseries dvrads}
+\begin{DoxyCompactList}\small\item\em Dealiased VRAD values for all (el, az, r). \end{DoxyCompactList}\item 
+\Hypertarget{structHoofData_a98b8b9dc347080b2d739ce20e09d9f18}\label{structHoofData_a98b8b9dc347080b2d739ce20e09d9f18} 
+\mbox{\hyperlink{structHoofMeasurement}{Hoof\+Measurement}} {\bfseries sdbz}
+\begin{DoxyCompactList}\small\item\em All data from superobed DBZ measurements. \end{DoxyCompactList}\item 
+\Hypertarget{structHoofData_aa74b5aa61e0764287782d04d05ca3c73}\label{structHoofData_aa74b5aa61e0764287782d04d05ca3c73} 
+\mbox{\hyperlink{structHoofMeasurement}{Hoof\+Measurement}} {\bfseries svrad}
+\begin{DoxyCompactList}\small\item\em All data from superobed VRAD measurements. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Struct that holds all data that needs to be transferred between worker objects. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{HoofData_8h}{Hoof\+Data.\+h}}\end{DoxyCompactItemize}

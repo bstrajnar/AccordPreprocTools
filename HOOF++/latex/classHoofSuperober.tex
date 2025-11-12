@@ -1,0 +1,96 @@
+\doxysection{Hoof\+Superober Class Reference}
+\hypertarget{classHoofSuperober}{}\label{classHoofSuperober}\index{HoofSuperober@{HoofSuperober}}
+
+
+Worker object that makes super observations from DBZ and VRAD data.  
+
+
+
+
+{\ttfamily \#include $<$Hoof\+Superober.\+h$>$}
+
+
+
+Inheritance diagram for Hoof\+Superober\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=162pt]{classHoofSuperober__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Hoof\+Superober\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=188pt]{classHoofSuperober__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classHoofSuperober_aa0fd8fd61bfbe4f0217c94033b7ac78a}{Hoof\+Superober}} (\mbox{\hyperlink{structHoofData}{Hoof\+Data}} \&data, \mbox{\hyperlink{classHoofH5File}{Hoof\+H5\+File}} \&out\+File)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\Hypertarget{classHoofSuperober_a0254233ef0490375dfd60fa3df4002bf}\label{classHoofSuperober_a0254233ef0490375dfd60fa3df4002bf} 
+void {\bfseries check\+Data} ()
+\begin{DoxyCompactList}\small\item\em Checks if data is ok for superobing. \end{DoxyCompactList}\item 
+\Hypertarget{classHoofSuperober_ab1d09790c6294300c6eca8b6e9a403e3}\label{classHoofSuperober_ab1d09790c6294300c6eca8b6e9a403e3} 
+void {\bfseries prepare\+Metadata} ()
+\begin{DoxyCompactList}\small\item\em Prepares the superobed metadata. \end{DoxyCompactList}\item 
+\Hypertarget{classHoofSuperober_acde6722af299f03592430fb5fcf9a22e}\label{classHoofSuperober_acde6722af299f03592430fb5fcf9a22e} 
+void {\bfseries superob} ()
+\begin{DoxyCompactList}\small\item\em Superobs the data. \end{DoxyCompactList}\item 
+\Hypertarget{classHoofSuperober_ad9afb3573a873ce350d76bb133c21bc3}\label{classHoofSuperober_ad9afb3573a873ce350d76bb133c21bc3} 
+void {\bfseries write} ()
+\begin{DoxyCompactList}\small\item\em Writes superobed data to file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classHoofWorker}{Hoof\+Worker}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Hoof\+Worker} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classHoofWorker_a80533a89f2f0a830849a9e9b1bdc1fce}{warning}} (const std\+::string \&warn)
+\begin{DoxyCompactList}\small\item\em Adds a warning. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classHoofWorker_af98354e13b34da2bcaafb694c96c2f30}{error}} (const std\+::string \&err)
+\begin{DoxyCompactList}\small\item\em Adds an error. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classHoofWorker_a319c5550fb1843e1f8ea2a54ef2247dc}{output}} (std\+::ofstream \&logfile)
+\begin{DoxyCompactList}\small\item\em Outputs warnings and/or errors to console and/or log. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{classHoofWorker}{Hoof\+Worker}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string {\bfseries class\+Message}
+\begin{DoxyCompactList}\small\item\em String that gets added at the beginning of warnings and errors. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ {\bfseries warnings}
+\begin{DoxyCompactList}\small\item\em Generated warning texts. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ {\bfseries errors}
+\begin{DoxyCompactList}\small\item\em Generated error texts. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Worker object that makes super observations from DBZ and VRAD data. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classHoofSuperober_aa0fd8fd61bfbe4f0217c94033b7ac78a}\label{classHoofSuperober_aa0fd8fd61bfbe4f0217c94033b7ac78a} 
+\index{HoofSuperober@{HoofSuperober}!HoofSuperober@{HoofSuperober}}
+\index{HoofSuperober@{HoofSuperober}!HoofSuperober@{HoofSuperober}}
+\doxysubsubsection{\texorpdfstring{HoofSuperober()}{HoofSuperober()}}
+{\footnotesize\ttfamily Hoof\+Superober\+::\+Hoof\+Superober (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structHoofData}{Hoof\+Data}} \&}]{data,  }\item[{\mbox{\hyperlink{classHoofH5File}{Hoof\+H5\+File}} \&}]{out\+File }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & A \doxylink{structHoofData}{Hoof\+Data} object to fill to be used later in dealiasing and superobing. \\
+\hline
+{\em out\+File} & The output file. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{HoofSuperober_8h}{Hoof\+Superober.\+h}}\item 
+\mbox{\hyperlink{HoofSuperober_8cpp}{Hoof\+Superober.\+cpp}}\end{DoxyCompactItemize}

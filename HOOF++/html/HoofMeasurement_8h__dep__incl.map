@@ -1,0 +1,20 @@
+<map id="HoofMeasurement.h" name="HoofMeasurement.h">
+<area shape="rect" id="Node000001" title="Contains definition of HoofMeasurement struct." alt="" coords="207,5,347,31"/>
+<area shape="rect" id="Node000002" href="$HoofData_8h.html" title="Contains definition of HoofData struct." alt="" coords="232,79,321,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="279,44,279,79,274,79,274,44"/>
+<area shape="rect" id="Node000003" href="$HoofDealiaser_8cpp.html" title="Contains the HoofDealiaser class implementation." alt="" coords="5,225,135,251"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="219,103,125,123,85,137,61,154,55,170,55,189,66,224,61,226,50,190,49,169,57,150,83,132,124,118,218,98"/>
+<area shape="rect" id="Node000004" href="$HoofDealiaser_8h.html" title="Contains definition of HoofDealiaser class." alt="" coords="71,152,186,177"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="242,112,154,154,152,149,240,107"/>
+<area shape="rect" id="Node000005" href="$HoofHomogenizer_8cpp.html" title="Contains the HoofHomogenizer class implementation." alt="" coords="171,225,321,251"/>
+<area shape="poly" id="edge5_Node000002_Node000005" title=" " alt="" coords="265,117,251,153,247,192,248,225,242,225,241,192,246,151,260,115"/>
+<area shape="rect" id="Node000006" href="$HoofHomogenizer_8h.html" title="Contains definition of HoofHomogenizer class." alt="" coords="261,152,399,177"/>
+<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="296,113,323,150,319,153,291,117"/>
+<area shape="rect" id="Node000007" href="$HoofSuperober_8cpp.html" title="Contains the HoofSuperober class implementation." alt="" coords="418,225,551,251"/>
+<area shape="poly" id="edge8_Node000002_Node000007" title=" " alt="" coords="327,106,370,125,412,150,451,188,479,223,475,226,448,191,408,154,367,130,325,111"/>
+<area shape="rect" id="Node000008" href="$HoofSuperober_8h.html" title="Contains definition of HoofSuperoberclass." alt="" coords="475,152,593,177"/>
+<area shape="poly" id="edge9_Node000002_Node000008" title=" " alt="" coords="332,105,493,149,492,154,330,110"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="112,190,82,227,77,224,108,186"/>
+<area shape="poly" id="edge7_Node000006_Node000005" title=" " alt="" coords="308,188,261,227,258,223,304,184"/>
+<area shape="poly" id="edge10_Node000008_Node000007" title=" " alt="" coords="520,190,495,227,490,224,516,187"/>
+</map>

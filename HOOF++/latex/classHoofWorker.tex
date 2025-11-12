@@ -1,0 +1,112 @@
+\doxysection{Hoof\+Worker Class Reference}
+\hypertarget{classHoofWorker}{}\label{classHoofWorker}\index{HoofWorker@{HoofWorker}}
+
+
+Class that handles output of warnings and errors.  
+
+
+
+
+{\ttfamily \#include $<$Hoof\+Worker.\+h$>$}
+
+
+
+Inheritance diagram for Hoof\+Worker\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classHoofWorker__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Hoof\+Worker\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=181pt]{classHoofWorker__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classHoofWorker_aea00fa9656fc22bdd5ed9f9de3ddcebc}\label{classHoofWorker_aea00fa9656fc22bdd5ed9f9de3ddcebc} 
+{\bfseries Hoof\+Worker} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classHoofWorker_a80533a89f2f0a830849a9e9b1bdc1fce}{warning}} (const std\+::string \&warn)
+\begin{DoxyCompactList}\small\item\em Adds a warning. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classHoofWorker_af98354e13b34da2bcaafb694c96c2f30}{error}} (const std\+::string \&err)
+\begin{DoxyCompactList}\small\item\em Adds an error. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classHoofWorker_a319c5550fb1843e1f8ea2a54ef2247dc}{output}} (std\+::ofstream \&logfile)
+\begin{DoxyCompactList}\small\item\em Outputs warnings and/or errors to console and/or log. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classHoofWorker_a8ea57977d55d67524a6b5785984f1954}\label{classHoofWorker_a8ea57977d55d67524a6b5785984f1954} 
+std\+::string {\bfseries class\+Message}
+\begin{DoxyCompactList}\small\item\em String that gets added at the beginning of warnings and errors. \end{DoxyCompactList}\item 
+\Hypertarget{classHoofWorker_a5b7cdc2963e7d665d72446e16ec48f29}\label{classHoofWorker_a5b7cdc2963e7d665d72446e16ec48f29} 
+std\+::vector$<$ std\+::string $>$ {\bfseries warnings}
+\begin{DoxyCompactList}\small\item\em Generated warning texts. \end{DoxyCompactList}\item 
+\Hypertarget{classHoofWorker_a7ec87956946b0c4efe6946ade4c29213}\label{classHoofWorker_a7ec87956946b0c4efe6946ade4c29213} 
+std\+::vector$<$ std\+::string $>$ {\bfseries errors}
+\begin{DoxyCompactList}\small\item\em Generated error texts. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class that handles output of warnings and errors. 
+
+Serves as the base class for all worker objects. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classHoofWorker_af98354e13b34da2bcaafb694c96c2f30}\label{classHoofWorker_af98354e13b34da2bcaafb694c96c2f30} 
+\index{HoofWorker@{HoofWorker}!error@{error}}
+\index{error@{error}!HoofWorker@{HoofWorker}}
+\doxysubsubsection{\texorpdfstring{error()}{error()}}
+{\footnotesize\ttfamily void Hoof\+Worker\+::error (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{err }\end{DoxyParamCaption})}
+
+
+
+Adds an error. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em err} & The error string. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classHoofWorker_a319c5550fb1843e1f8ea2a54ef2247dc}\label{classHoofWorker_a319c5550fb1843e1f8ea2a54ef2247dc} 
+\index{HoofWorker@{HoofWorker}!output@{output}}
+\index{output@{output}!HoofWorker@{HoofWorker}}
+\doxysubsubsection{\texorpdfstring{output()}{output()}}
+{\footnotesize\ttfamily void Hoof\+Worker\+::output (\begin{DoxyParamCaption}\item[{std\+::ofstream \&}]{logfile }\end{DoxyParamCaption})}
+
+
+
+Outputs warnings and/or errors to console and/or log. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em logfile} & A stream from an opened log file to which to write to. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classHoofWorker_a80533a89f2f0a830849a9e9b1bdc1fce}\label{classHoofWorker_a80533a89f2f0a830849a9e9b1bdc1fce} 
+\index{HoofWorker@{HoofWorker}!warning@{warning}}
+\index{warning@{warning}!HoofWorker@{HoofWorker}}
+\doxysubsubsection{\texorpdfstring{warning()}{warning()}}
+{\footnotesize\ttfamily void Hoof\+Worker\+::warning (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{warn }\end{DoxyParamCaption})}
+
+
+
+Adds a warning. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em warn} & The warning string. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{HoofWorker_8h}{Hoof\+Worker.\+h}}\item 
+\mbox{\hyperlink{HoofWorker_8cpp}{Hoof\+Worker.\+cpp}}\end{DoxyCompactItemize}

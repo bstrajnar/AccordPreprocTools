@@ -1,0 +1,17 @@
+<map id="HoofWorker.h" name="HoofWorker.h">
+<area shape="rect" id="Node000001" title="Contains definition of HoofWorker class." alt="" coords="259,5,361,31"/>
+<area shape="rect" id="Node000002" href="$HoofDealiaser_8h.html" title="Contains definition of HoofDealiaser class." alt="" coords="19,79,134,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="260,37,115,81,114,76,259,32"/>
+<area shape="rect" id="Node000004" href="$HoofHomogenizer_8h.html" title="Contains definition of HoofHomogenizer class." alt="" coords="165,79,303,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="290,42,248,80,245,76,286,38"/>
+<area shape="rect" id="Node000006" href="$HoofSuperober_8h.html" title="Contains definition of HoofSuperoberclass." alt="" coords="327,79,445,104"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="334,38,375,76,372,80,330,42"/>
+<area shape="rect" id="Node000008" href="$HoofWorker_8cpp.html" title="Contains the HoofWorker class implementation." alt="" coords="470,79,585,104"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="359,32,493,76,491,81,357,37"/>
+<area shape="rect" id="Node000003" href="$HoofDealiaser_8cpp.html" title="Contains the HoofDealiaser class implementation." alt="" coords="5,152,135,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="77,118,74,152,68,152,72,118"/>
+<area shape="rect" id="Node000005" href="$HoofHomogenizer_8cpp.html" title="Contains the HoofHomogenizer class implementation." alt="" coords="159,152,309,177"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="237,118,237,152,231,152,231,118"/>
+<area shape="rect" id="Node000007" href="$HoofSuperober_8cpp.html" title="Contains the HoofSuperober class implementation." alt="" coords="334,152,467,177"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="394,117,401,151,396,152,389,118"/>
+</map>

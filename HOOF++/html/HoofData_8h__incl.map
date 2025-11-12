@@ -1,0 +1,24 @@
+<map id="HoofData.h" name="HoofData.h">
+<area shape="rect" id="Node000001" title="Contains definition of HoofData struct." alt="" coords="169,5,259,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,225,60,251"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="170,31,123,49,101,63,81,80,61,112,48,147,36,212,31,211,42,146,56,109,77,77,97,59,121,45,168,26"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="394,225,453,251"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="227,29,405,213,401,217,223,33"/>
+<area shape="rect" id="Node000004" href="$HoofTypes_8h.html" title="Contains a namespace with shorthand aliases for types used throughout HOOF." alt="" coords="150,152,246,177"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="225,30,243,63,248,84,246,105,236,126,222,143,218,140,231,123,241,103,243,84,238,65,221,32"/>
+<area shape="rect" id="Node000009" href="$HoofMeasurement_8h.html" title="Contains definition of HoofMeasurement struct." alt="" coords="91,79,231,104"/>
+<area shape="poly" id="edge10_Node000001_Node000009" title=" " alt="" coords="207,33,180,69,175,66,203,29"/>
+<area shape="poly" id="edge9_Node000004_Node000002" title=" " alt="" coords="172,180,73,222,71,217,170,175"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="235,175,382,221,380,226,233,180"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="234,225,285,251"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="210,176,242,213,238,217,206,179"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="309,225,370,251"/>
+<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="222,175,305,217,303,221,220,180"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="85,225,138,251"/>
+<area shape="poly" id="edge7_Node000004_Node000007" title=" " alt="" coords="186,179,138,219,134,214,182,175"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="163,225,209,251"/>
+<area shape="poly" id="edge8_Node000004_Node000008" title=" " alt="" coords="199,178,193,212,188,211,193,177"/>
+<area shape="poly" id="edge11_Node000009_Node000002" title=" " alt="" coords="152,106,54,217,50,213,148,103"/>
+<area shape="poly" id="edge12_Node000009_Node000003" title=" " alt="" coords="183,102,392,217,390,221,180,107"/>
+<area shape="poly" id="edge13_Node000009_Node000004" title=" " alt="" coords="169,103,188,139,183,141,164,106"/>
+</map>

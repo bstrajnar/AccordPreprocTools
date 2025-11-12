@@ -1,0 +1,54 @@
+<map id="HoofHomogenizer.h" name="HoofHomogenizer.h">
+<area shape="rect" id="Node000001" title="Contains definition of HoofHomogenizer class." alt="" coords="369,5,506,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="439,299,494,324"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="430,32,411,58,392,93,378,134,376,156,379,177,391,215,413,249,446,287,442,291,409,252,386,217,373,178,371,156,373,133,387,91,407,55,425,29"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="644,299,703,324"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="465,28,518,55,583,97,616,124,647,154,674,187,696,224,700,240,699,257,689,288,684,286,694,256,695,241,691,226,670,190,643,157,613,128,580,101,515,60,463,33"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="232,225,299,251"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="397,33,356,52,336,65,319,80,298,112,284,148,270,212,265,211,279,146,294,110,315,77,333,60,353,47,395,28"/>
+<area shape="rect" id="Node000005" href="$HoofTypes_8h.html" title="Contains a namespace with shorthand aliases for types used throughout HOOF." alt="" coords="960,225,1056,251"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="506,20,677,36,778,52,878,76,969,97,1005,114,1021,129,1037,151,1043,167,1041,184,1028,215,1023,213,1036,183,1037,168,1032,153,1017,133,1001,118,967,102,877,81,777,57,676,41,506,25"/>
+<area shape="rect" id="Node000010" href="$HoofWorker_8h.html" title="Contains definition of HoofWorker class." alt="" coords="5,225,107,251"/>
+<area shape="poly" id="edge11_Node000001_Node000010" title=" " alt="" coords="382,33,311,52,236,81,180,112,131,154,100,185,75,216,71,213,96,182,128,150,177,108,234,76,309,47,380,28"/>
+<area shape="rect" id="Node000012" href="$HoofH5File_8h.html" title="Contains definition of HoofH5File class." alt="" coords="388,152,487,177"/>
+<area shape="poly" id="edge15_Node000001_Node000012" title=" " alt="" coords="440,31,440,138,435,138,435,31"/>
+<area shape="rect" id="Node000014" href="$HoofData_8h.html" title="Contains definition of HoofData struct." alt="" coords="777,79,866,104"/>
+<area shape="poly" id="edge21_Node000001_Node000014" title=" " alt="" coords="500,28,764,77,763,82,499,33"/>
+<area shape="rect" id="Node000016" href="$HoofNamAtt_8h.html" title="Contains definition of HoofNamAtt class." alt="" coords="141,152,248,177"/>
+<area shape="poly" id="edge29_Node000001_Node000016" title=" " alt="" coords="382,33,325,52,268,81,236,110,211,142,207,139,232,107,265,76,323,47,381,28"/>
+<area shape="rect" id="Node000017" href="$HoofHomQty_8h.html" title="Contains definition of HoofHomQty class." alt="" coords="574,225,682,251"/>
+<area shape="poly" id="edge33_Node000001_Node000017" title=" " alt="" coords="450,29,611,213,607,216,446,33"/>
+<area shape="poly" id="edge10_Node000005_Node000002" title=" " alt="" coords="960,248,508,307,507,302,960,243"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="960,252,717,304,715,298,959,247"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="1019,299,1069,324"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="1016,250,1034,285,1030,288,1012,252"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="1093,299,1155,324"/>
+<area shape="poly" id="edge7_Node000005_Node000007" title=" " alt="" coords="1028,248,1095,289,1092,294,1025,253"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="869,299,923,324"/>
+<area shape="poly" id="edge8_Node000005_Node000008" title=" " alt="" coords="991,253,928,293,925,289,989,248"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="947,299,994,324"/>
+<area shape="poly" id="edge9_Node000005_Node000009" title=" " alt="" coords="1004,252,985,288,981,285,999,250"/>
+<area shape="poly" id="edge12_Node000010_Node000002" title=" " alt="" coords="107,245,426,300,425,306,106,251"/>
+<area shape="poly" id="edge13_Node000010_Node000003" title=" " alt="" coords="107,243,631,302,630,308,107,248"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="23,299,89,324"/>
+<area shape="poly" id="edge14_Node000010_Node000011" title=" " alt="" coords="59,251,59,285,53,285,53,251"/>
+<area shape="poly" id="edge16_Node000012_Node000002" title=" " alt="" coords="433,179,421,212,418,231,421,250,431,269,445,287,441,290,427,272,416,251,413,231,416,210,428,177"/>
+<area shape="poly" id="edge17_Node000012_Node000003" title=" " alt="" coords="440,177,445,213,453,232,465,249,502,276,546,293,591,303,630,307,630,312,590,308,545,298,500,280,461,253,448,235,440,214,435,178"/>
+<area shape="poly" id="edge18_Node000012_Node000004" title=" " alt="" coords="411,180,307,222,305,218,409,175"/>
+<area shape="poly" id="edge20_Node000012_Node000005" title=" " alt="" coords="487,170,947,226,946,232,487,175"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="475,225,549,251"/>
+<area shape="poly" id="edge19_Node000012_Node000013" title=" " alt="" coords="451,175,492,214,488,218,447,179"/>
+<area shape="poly" id="edge22_Node000014_Node000002" title=" " alt="" coords="818,106,800,135,773,175,738,217,695,253,648,277,598,293,550,304,509,310,508,304,549,299,596,288,646,272,692,248,734,213,769,172,796,133,813,103"/>
+<area shape="poly" id="edge23_Node000014_Node000003" title=" " alt="" coords="825,104,825,133,822,172,812,214,791,252,775,269,757,282,717,301,715,296,754,278,772,265,787,249,807,212,817,171,820,133,820,104"/>
+<area shape="poly" id="edge24_Node000014_Node000005" title=" " alt="" coords="867,90,904,94,944,104,982,122,1013,150,1020,165,1023,181,1019,212,1014,212,1017,182,1015,167,1009,154,979,126,942,109,903,99,866,95"/>
+<area shape="rect" id="Node000015" href="$HoofMeasurement_8h.html" title="Contains definition of HoofMeasurement struct." alt="" coords="859,152,999,177"/>
+<area shape="poly" id="edge25_Node000014_Node000015" title=" " alt="" coords="840,102,902,142,899,147,837,106"/>
+<area shape="poly" id="edge26_Node000015_Node000002" title=" " alt="" coords="916,180,862,216,827,236,790,253,714,277,636,293,508,310,507,305,635,288,713,272,788,248,825,232,860,212,913,175"/>
+<area shape="poly" id="edge27_Node000015_Node000003" title=" " alt="" coords="930,179,918,215,908,235,892,253,851,279,804,297,758,307,717,311,717,306,757,301,802,292,848,275,889,249,903,232,914,213,925,177"/>
+<area shape="poly" id="edge28_Node000015_Node000005" title=" " alt="" coords="944,175,987,214,983,218,940,179"/>
+<area shape="poly" id="edge30_Node000016_Node000002" title=" " alt="" coords="189,179,173,214,171,232,178,249,194,262,219,272,286,289,361,300,426,305,426,310,360,305,285,294,217,277,191,266,174,252,166,233,168,212,184,177"/>
+<area shape="poly" id="edge31_Node000016_Node000003" title=" " alt="" coords="197,177,202,213,209,233,222,249,243,258,282,267,397,283,630,304,630,310,396,288,282,272,241,263,218,253,205,235,197,215,192,178"/>
+<area shape="poly" id="edge32_Node000016_Node000004" title=" " alt="" coords="208,176,246,214,242,218,204,180"/>
+<area shape="poly" id="edge34_Node000017_Node000002" title=" " alt="" coords="603,253,507,295,504,291,601,248"/>
+<area shape="poly" id="edge35_Node000017_Node000003" title=" " alt="" coords="638,250,661,286,656,289,633,252"/>
+</map>

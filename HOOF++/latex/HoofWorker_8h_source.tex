@@ -1,0 +1,32 @@
+\doxysection{Hoof\+Worker.\+h}
+\hypertarget{HoofWorker_8h_source}{}\label{HoofWorker_8h_source}\mbox{\hyperlink{HoofWorker_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#ifndef\ HOOFWORKER\_GUARD}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ HOOFWORKER\_GUARD}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classHoofWorker}{HoofWorker}}}
+\DoxyCodeLine{00021\ \{}
+\DoxyCodeLine{00022\ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \textcolor{comment}{//\ members}}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{classHoofWorker_a8ea57977d55d67524a6b5785984f1954}{classMessage}};\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ std::vector<std::string>\ \mbox{\hyperlink{classHoofWorker_a5b7cdc2963e7d665d72446e16ec48f29}{warnings}};\ }
+\DoxyCodeLine{00026\ \ \ \ \ \ \ std::vector<std::string>\ \mbox{\hyperlink{classHoofWorker_a7ec87956946b0c4efe6946ade4c29213}{errors}};\ \ \ }
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \textcolor{comment}{//\ constructor}}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \mbox{\hyperlink{classHoofWorker_aea00fa9656fc22bdd5ed9f9de3ddcebc}{HoofWorker}}();}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \textcolor{comment}{//\ adds\ a\ warning}}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classHoofWorker_a80533a89f2f0a830849a9e9b1bdc1fce}{warning}}(\textcolor{keyword}{const}\ std::string\&\ warn);\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \textcolor{comment}{//\ adds\ an\ error}}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classHoofWorker_af98354e13b34da2bcaafb694c96c2f30}{error}}(\textcolor{keyword}{const}\ std::string\&\ err);}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \textcolor{comment}{//\ outputs\ warning\ and/or\ errors\ to\ console\ and/or\ log}}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classHoofWorker_a319c5550fb1843e1f8ea2a54ef2247dc}{output}}(std::ofstream\&\ logfile);}
+\DoxyCodeLine{00036\ \};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ HOOFWORKER\_GUARD}}
+
+\end{DoxyCode}

@@ -1,0 +1,20 @@
+<map id="HoofNamAtt.h" name="HoofNamAtt.h">
+<area shape="rect" id="Node000001" title="Contains definition of HoofNamAtt class." alt="" coords="162,5,269,31"/>
+<area shape="rect" id="Node000002" href="$HoofHomogenizer_8cpp.html" title="Contains the HoofHomogenizer class implementation." alt="" coords="5,152,156,177"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="150,35,112,52,96,65,83,80,76,98,74,117,80,151,74,152,69,117,71,96,78,77,92,61,109,48,148,30"/>
+<area shape="rect" id="Node000003" href="$HoofHomogenizer_8h.html" title="Contains definition of HoofHomogenizer class." alt="" coords="93,79,231,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="201,43,173,80,169,77,196,40"/>
+<area shape="rect" id="Node000004" href="$HoofSettings_8cpp.html" title="Contains the HoofSettings class implementation." alt="" coords="181,152,303,177"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="231,42,245,78,248,119,246,152,241,152,243,119,239,79,226,44"/>
+<area shape="rect" id="Node000005" href="$HoofSettings_8h.html" title="Contains definition of HoofSettings class." alt="" coords="322,79,431,104"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="255,34,351,76,349,81,253,39"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="140,115,96,154,92,150,137,111"/>
+<area shape="poly" id="edge7_Node000005_Node000002" title=" " alt="" coords="317,110,129,154,128,149,315,105"/>
+<area shape="poly" id="edge8_Node000005_Node000004" title=" " alt="" coords="344,113,265,154,263,149,342,108"/>
+<area shape="rect" id="Node000006" href="$HoofDealiaser_8cpp.html" title="Contains the HoofDealiaser class implementation." alt="" coords="328,152,457,177"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="385,117,393,151,387,152,380,118"/>
+<area shape="rect" id="Node000007" href="$HoofSuperober_8cpp.html" title="Contains the HoofSuperober class implementation." alt="" coords="482,152,615,177"/>
+<area shape="poly" id="edge9_Node000005_Node000007" title=" " alt="" coords="418,107,522,149,520,154,416,112"/>
+<area shape="rect" id="Node000008" href="$HoofWorker_8cpp.html" title="Contains the HoofWorker class implementation." alt="" coords="639,152,754,177"/>
+<area shape="poly" id="edge10_Node000005_Node000008" title=" " alt="" coords="442,104,645,149,644,154,441,110"/>
+</map>

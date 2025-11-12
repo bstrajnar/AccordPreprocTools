@@ -1,0 +1,43 @@
+\doxysection{Hoof\+Superober.\+h}
+\hypertarget{HoofSuperober_8h_source}{}\label{HoofSuperober_8h_source}\mbox{\hyperlink{HoofSuperober_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#ifndef\ HOOFSUPEROBER\_GUARD}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ HOOFSUPEROBER\_GUARD}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{HoofTypes_8h}{HoofTypes.h}}>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{HoofWorker_8h}{HoofWorker.h}}>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{HoofH5File_8h}{HoofH5File.h}}>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{HoofData_8h}{HoofData.h}}>}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classHoofSuperober}{HoofSuperober}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classHoofWorker}{HoofWorker}}}
+\DoxyCodeLine{00020\ \{}
+\DoxyCodeLine{00021\ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \textcolor{comment}{//\ members}}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \mbox{\hyperlink{structHoofData}{HoofData}}\&\ \_data;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \mbox{\hyperlink{classHoofH5File}{HoofH5File}}\&\ \_outFile;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \_dbzsNaN;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \_vradsNaN;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00027\ \ \ \ \ \ \ hoof::vector2D<int>\ \_rangeBorders;\ \ \ \ }
+\DoxyCodeLine{00028\ \ \ \ \ \ \ hoof::vector3D<int>\ \_startRayBorders;\ }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ hoof::vector3D<int>\ \_endRayBorders;\ \ \ }
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \textcolor{comment}{//\ gets\ superob\ bin\ borders\ for\ ranges,\ start\ rays\ and\ end\ rays}}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_calculateBinBorders(\textcolor{keyword}{const}\ std::string\&\ type);}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \textcolor{comment}{//\ constructor}}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \mbox{\hyperlink{classHoofSuperober}{HoofSuperober}}(\mbox{\hyperlink{structHoofData}{HoofData}}\&\ data,\ \mbox{\hyperlink{classHoofH5File}{HoofH5File}}\&\ outFile);}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \textcolor{comment}{//\ checks\ data\ if\ it\ is\ ok\ for\ superobing}}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classHoofSuperober_a0254233ef0490375dfd60fa3df4002bf}{checkData}}();}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \textcolor{comment}{//\ prepares\ the\ superobed\ metadata}}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classHoofSuperober_ab1d09790c6294300c6eca8b6e9a403e3}{prepareMetadata}}();}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \textcolor{comment}{//\ superobs\ data}}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classHoofSuperober_acde6722af299f03592430fb5fcf9a22e}{superob}}();}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \textcolor{comment}{//\ writes\ superobed\ data\ to\ file}}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classHoofSuperober_ad9afb3573a873ce350d76bb133c21bc3}{write}}();}
+\DoxyCodeLine{00045\ \};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ HOOFSUPEROBER\_GUARD}}
+
+\end{DoxyCode}

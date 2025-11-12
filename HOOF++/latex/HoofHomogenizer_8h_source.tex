@@ -1,0 +1,99 @@
+\doxysection{Hoof\+Homogenizer.\+h}
+\hypertarget{HoofHomogenizer_8h_source}{}\label{HoofHomogenizer_8h_source}\mbox{\hyperlink{HoofHomogenizer_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#ifndef\ HOOFHOMOGENIZER\_GUARD}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ HOOFHOMOGENIZER\_GUARD}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <optional>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{HoofTypes_8h}{HoofTypes.h}}>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{HoofWorker_8h}{HoofWorker.h}}>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{HoofH5File_8h}{HoofH5File.h}}>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{HoofData_8h}{HoofData.h}}>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{HoofNamAtt_8h}{HoofNamAtt.h}}>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{HoofHomQty_8h}{HoofHomQty.h}}>}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classHoofHomogenizer}{HoofHomogenizer}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classHoofWorker}{HoofWorker}}}
+\DoxyCodeLine{00025\ \{}
+\DoxyCodeLine{00026\ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \textcolor{comment}{//\ members\ }}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \mbox{\hyperlink{classHoofH5File}{HoofH5File}}\&\ \_inFile;\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \mbox{\hyperlink{classHoofH5File}{HoofH5File}}\&\ \_outFile;\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \mbox{\hyperlink{structHoofData}{HoofData}}\&\ \_data;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00031\ \ \ \ \ \ \ std::vector<HoofHomQty>\ \_qtys;\ \ \ }
+\DoxyCodeLine{00032\ \ \ \ }
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \textcolor{comment}{//\ gets\ the\ unique\ namelist\ metadata\ groups\ by\ group\ type}}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ std::vector<std::string>\ \_getNamelistMetadataGroups(\textcolor{keyword}{const}\ std::string\&\ groupType)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \textcolor{comment}{//\ gets\ namelist\ attributes\ from\ a\ namelist\ group\ }}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ std::vector<HoofNamAtt>\ \_getNamelistGroupAtts(\textcolor{keyword}{const}\ std::string\&\ group)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \textcolor{comment}{//\ gets\ an\ attribute\ value\ of\ type\ T\ either\ from\ namelist\ or\ the\ input\ or\ output\ file}}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>\ std::optional<T>\ \_getAtt(\textcolor{keyword}{const}\ std::string\&\ group,\ \textcolor{keyword}{const}\ std::string\&\ name);}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \textcolor{comment}{//\ gets\ the\ elevation\ angle\ of\ a\ dataset\ rounded\ to\ 1\ decimal}}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ std::optional<double>\ \_getRoundedElAngle(\textcolor{keyword}{const}\ std::string\&\ dataset);}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \textcolor{comment}{//\ gets\ the\ start\ datetime\ of\ a\ dataset\ of\ the\ input\ file}}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ std::optional<std::string>\ \_getStartDatetime(\textcolor{keyword}{const}\ std::string\&\ dataset);}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \textcolor{comment}{//\ gets\ the\ HOOF\ task\ name\ of\ a\ quality\ group\ of\ the\ input\ file}}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ std::optional<std::string>\ \_getHoofTaskName(\textcolor{keyword}{const}\ std::string\&\ quality);\ \ \ }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \textcolor{comment}{//\ determines\ if\ a\ data\ or\ a\ quality\ group\ is\ a\ particular\ homogenization\ quantity}}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \_isQtyType(\textcolor{keyword}{const}\ std::string\&\ name,\ \textcolor{keyword}{const}\ std::string\&\ dataset,\ \textcolor{keyword}{const}\ std::string\&\ data)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \textcolor{comment}{//\ finds\ homogenization\ quantities\ with\ a\ date,\ elevation\ angle\ and\ optionally\ task\ and\ the\ new}}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \textcolor{comment}{//\ dataset\ group\ in\ a\ vector}}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ std::optional<std::vector<HoofHomQty>>\ \_findQtys(}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::vector<HoofHomQty>\&\ qtys,\ \textcolor{keywordtype}{double}\ elAngle,\ \textcolor{keyword}{const}\ std::string\&\ datetime,}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ task=\textcolor{stringliteral}{"{}"{}},\ \textcolor{keyword}{const}\ std::string\&\ newDataset=\textcolor{stringliteral}{"{}"{}})\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \textcolor{comment}{//\ gets\ all\ homogenization\ quantities\ from\ the\ file}}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_getQtys(std::vector<HoofHomQty>\&\ dbzs,\ std::vector<HoofHomQty>\&\ ths,}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ std::vector<HoofHomQty>\&\ vrads,\ std::vector<HoofHomQty>\&\ quals);}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \textcolor{comment}{//\ sorts\ the\ TH\ quantities\ into\ DBZ\ datasets}}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_sortThs(\textcolor{keyword}{const}\ std::vector<HoofHomQty>\&\ ths,\ \textcolor{keyword}{const}\ std::vector<HoofHomQty>\&\ dbzs,}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ std::vector<HoofHomQty>\&\ newThs);}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \textcolor{comment}{//\ checks\ if\ all\ DBZ\ quantities\ have\ a\ corresponding\ TH\ quantity}}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_checkDbzs(\textcolor{keyword}{const}\ std::vector<HoofHomQty>\&\ dbzs,\ \textcolor{keyword}{const}\ std::vector<HoofHomQty>\&\ ths,}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ std::vector<HoofHomQty>\&\ newDbzs,\ std::vector<HoofHomQty>\&\ newThs);}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \textcolor{comment}{//\ sorts\ QUALITYn\ quantities\ into\ DBZ\ or\ VRAD\ datasets}}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_sortQuals(\textcolor{keyword}{const}\ std::vector<HoofHomQty>\&\ quals,\ \textcolor{keyword}{const}\ std::vector<HoofHomQty>\&\ dbzs,}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::vector<HoofHomQty>\&\ vrads,\ std::vector<HoofHomQty>\&\ newQuals);}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \textcolor{comment}{//\ checks\ if\ a\ quantity\ has\ the\ required\ quality\ groups}}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \_hasReqQualGroups(\textcolor{keyword}{const}\ std::vector<HoofHomQty>\&\ qtys,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ elAngle,}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ datetime,\ \textcolor{keyword}{const}\ std::vector<std::string>\&\ reqNames)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \textcolor{comment}{//\ checks\ if\ each\ DBZ\ and\ VRAD\ quantity\ has\ the\ required\ quality\ groups}}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_checkReqDbzsVrads(\textcolor{keyword}{const}\ std::vector<HoofHomQty>\&\ dbzs,\ \textcolor{keyword}{const}\ std::vector<HoofHomQty>\&\ ths,}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::vector<HoofHomQty>\&\ quals,\ std::vector<HoofHomQty>\&\ newDbzs,}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ std::vector<HoofHomQty>\&\ newThs,\ std::vector<HoofHomQty>\&\ newQuals);}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \textcolor{comment}{//\ recounts\ homogenization\ quantities\ so\ that\ datasets\ begin\ with\ 1}}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_recountQtys(\textcolor{keyword}{const}\ std::vector<HoofHomQty>\&\ dbzs,\ \textcolor{keyword}{const}\ std::vector<HoofHomQty>\&\ ths,}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::vector<HoofHomQty>\&\ vrads,\ \textcolor{keyword}{const}\ std::vector<HoofHomQty>\&\ quals,}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ std::vector<HoofHomQty>\&\ newDbzs,\ std::vector<HoofHomQty>\&\ newThs,}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ std::vector<HoofHomQty>\&\ newVrads,\ std::vector<HoofHomQty>\&\ newQuals);}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \textcolor{comment}{//\ checks\ and\ writes\ attributes\ from\ metadata\ groups\ of\ a\ group\ type\ in\ a\ homogenization\ quantity}}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \textcolor{comment}{//\ either\ from\ namelist\ or\ input\ file\ to\ the\ output\ file}}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_checkAndWriteQtyMetadataGroups(\textcolor{keyword}{const}\ std::string\&\ groupType,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classHoofHomQty}{HoofHomQty}}\&\ qty);}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \textcolor{comment}{//\ fills\ a\ 2D\ vector\ with\ dataset\ values\ from\ a\ data\ group\ of\ the\ homogenized\ file,}}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \textcolor{comment}{//\ recalculated\ to\ double\ values}}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_fillHomDataDataset(std::vector<std::vector<double>>\&\ vec,\ \textcolor{keyword}{const}\ std::string\&\ group,}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ name);\ \ \ \ \ \ \ }
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \textcolor{comment}{//\ fills\ a\ 2D\ vector\ with\ dataset\ values\ from\ a\ quality\ group\ of\ the\ homogenized\ file,}}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \textcolor{comment}{//\ recalculated\ to\ double\ values}}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_fillHomQualDataset(hoof::vector2D<double>\&\ vec,\ \textcolor{keyword}{const}\ std::string\&\ group,}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ name,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ nodata);\ }
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \textcolor{comment}{//\ gets\ an\ attribute\ value\ of\ type\ T\ from\ the\ homogenized\ file}}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>\ std::optional<T>\ \_getHomAtt(\textcolor{keyword}{const}\ std::string\&\ group,\ \textcolor{keyword}{const}\ std::string\&\ name);}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00090\ \ \ \ \textcolor{keyword}{public}:\ \ }
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \textcolor{comment}{//\ constructor}}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \mbox{\hyperlink{classHoofHomogenizer}{HoofHomogenizer}}(\mbox{\hyperlink{classHoofH5File}{HoofH5File}}\&\ inFile,\ \mbox{\hyperlink{classHoofH5File}{HoofH5File}}\&\ outFile,\ \mbox{\hyperlink{structHoofData}{HoofData}}\&\ data);}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \textcolor{comment}{//\ finds\ all\ quantities\ in\ the\ input\ file\ satisfying\ the\ namelist\ criteria\ and\ sorts}}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \textcolor{comment}{//\ them\ in\ a\ homogenized\ order.}}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classHoofHomogenizer_a9ff97735d61f42c9c138d5f0fa30eac4}{sort}}();\ \ \ \ \ \ }
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \textcolor{comment}{//\ checks\ if\ groups\ and\ attributes\ required\ by\ the\ namelist\ exist\ in\ the\ input\ file\ and\ writes\ them\ to}}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \textcolor{comment}{//\ the\ output\ file}}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classHoofHomogenizer_aab48838566bb9690d2a15c88e44ae552}{checkAndWrite}}();}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \textcolor{comment}{//\ stores\ homogenized\ data\ to\ a\ HoofData\ object\ for\ further\ use}}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classHoofHomogenizer_aaa6abc82a32b5b854df42ec73502718d}{storeData}}();}
+\DoxyCodeLine{00101\ \};}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ HOOFHOMOGENIZER\_GUARD}}
+
+\end{DoxyCode}

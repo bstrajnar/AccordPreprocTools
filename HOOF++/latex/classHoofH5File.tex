@@ -1,0 +1,190 @@
+\doxysection{Hoof\+H5\+File Class Reference}
+\hypertarget{classHoofH5File}{}\label{classHoofH5File}\index{HoofH5File@{HoofH5File}}
+
+
+Class that wraps the HDF5 API that is needed in HOOF.  
+
+
+
+
+{\ttfamily \#include $<$Hoof\+H5\+File.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classHoofH5File_ab5be5328b010c7c099f4123b5764d6d0}\label{classHoofH5File_ab5be5328b010c7c099f4123b5764d6d0} 
+{\bfseries Hoof\+H5\+File} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\Hypertarget{classHoofH5File_a53be5facf47996cfe658a2df0920cbbb}\label{classHoofH5File_a53be5facf47996cfe658a2df0920cbbb} 
+{\bfseries Hoof\+H5\+File} (const std\+::string \&file\+Path, const std\+::string \&access)
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classHoofH5File_a7c9d96149af5ad756e9474adea918fc3}{get\+Datasets}} () const
+\begin{DoxyCompactList}\small\item\em Gets all dataset names from the file. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classHoofH5File_ae01efb364b369e07ba2414514f22699f}{get\+Datas}} (const std\+::string \&dataset, const std\+::string \&group\+Type) const
+\begin{DoxyCompactList}\small\item\em Gets all data or quality groups in a dataset. \end{DoxyCompactList}\item 
+\Hypertarget{classHoofH5File_a25aa845070bfb6637d2aa2fafe79b881}\label{classHoofH5File_a25aa845070bfb6637d2aa2fafe79b881} 
+{\footnotesize template$<$typename T $>$ }\\std\+::optional$<$ T $>$ {\bfseries get\+Att} (const std\+::string \&group, const std\+::string \&name) const
+\item 
+\Hypertarget{classHoofH5File_a56922f882c641fd80e5cdedf93a2eee8}\label{classHoofH5File_a56922f882c641fd80e5cdedf93a2eee8} 
+{\footnotesize template$<$typename T $>$ }\\void {\bfseries write\+Att} (const std\+::string \&group, const std\+::string \&name, const T \&value) const
+\item 
+void \mbox{\hyperlink{classHoofH5File_a260bc287c71b200e61b6afd04bc30b18}{copy\+Dataset}} (\mbox{\hyperlink{classHoofH5File}{Hoof\+H5\+File}} \&out\+File, const std\+::string \&old\+Group, const std\+::string \&new\+Group) const
+\begin{DoxyCompactList}\small\item\em Copies a dataset from this file to another file. \end{DoxyCompactList}\item 
+std\+::optional$<$ hoof\+::vector2D$<$ unsigned char $>$ $>$ \mbox{\hyperlink{classHoofH5File_a871fd2d59b5dd26cb2e51f0870d75188}{get\+Dataset}} (const std\+::string \&group, const std\+::string \&name) const
+\begin{DoxyCompactList}\small\item\em Gets a dataset. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classHoofH5File_a9023f9c0e8090ddd126111ffb04561f9}{write\+Dataset}} (const std\+::string \&group, const std\+::string \&name, const hoof\+::vector2D$<$ unsigned char $>$ \&data)
+\begin{DoxyCompactList}\small\item\em Creates or replaces a dataset. \end{DoxyCompactList}\item 
+\Hypertarget{classHoofH5File_a99304620562977586aa9e574c72e70cf}\label{classHoofH5File_a99304620562977586aa9e574c72e70cf} 
+void {\bfseries flush} ()
+\begin{DoxyCompactList}\small\item\em Flushes the file buffer to file. \end{DoxyCompactList}\item 
+\Hypertarget{classHoofH5File_a0dc66cd8104070212bf1be0574584079}\label{classHoofH5File_a0dc66cd8104070212bf1be0574584079} 
+void {\bfseries close} ()
+\begin{DoxyCompactList}\small\item\em Closes the H5\+File to free memory. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\optional$<$ T $>$ \mbox{\hyperlink{classHoofH5File_ae0502988b03a90c9547f061268fdfa42}{get\+Att}} (const string \&group, const string \&name) const
+\begin{DoxyCompactList}\small\item\em Gets an attribute of type T. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{classHoofH5File_a4208f1be877e11bff055b4ebc808f367}{write\+Att}} (const string \&group, const string \&name, const T \&value) const
+\begin{DoxyCompactList}\small\item\em Creates or overwrites an attribute of type T. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class that wraps the HDF5 API that is needed in HOOF. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classHoofH5File_a260bc287c71b200e61b6afd04bc30b18}\label{classHoofH5File_a260bc287c71b200e61b6afd04bc30b18} 
+\index{HoofH5File@{HoofH5File}!copyDataset@{copyDataset}}
+\index{copyDataset@{copyDataset}!HoofH5File@{HoofH5File}}
+\doxysubsubsection{\texorpdfstring{copyDataset()}{copyDataset()}}
+{\footnotesize\ttfamily void Hoof\+H5\+File\+::copy\+Dataset (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classHoofH5File}{Hoof\+H5\+File}} \&}]{out\+File,  }\item[{const std\+::string \&}]{old\+Group,  }\item[{const std\+::string \&}]{new\+Group }\end{DoxyParamCaption}) const}
+
+
+
+Copies a dataset from this file to another file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em out\+File} & The file to copy to. \\
+\hline
+{\em old\+Group} & The dataset group in the old file. \\
+\hline
+{\em new\+Group} & The dataset group in the new file. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classHoofH5File_ae0502988b03a90c9547f061268fdfa42}\label{classHoofH5File_ae0502988b03a90c9547f061268fdfa42} 
+\index{HoofH5File@{HoofH5File}!getAtt@{getAtt}}
+\index{getAtt@{getAtt}!HoofH5File@{HoofH5File}}
+\doxysubsubsection{\texorpdfstring{getAtt()}{getAtt()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template optional$<$ int $>$ Hoof\+H5\+File\+::get\+Att$<$ int $>$ (\begin{DoxyParamCaption}\item[{const string \&}]{group,  }\item[{const string \&}]{name }\end{DoxyParamCaption}) const}
+
+
+
+Gets an attribute of type T. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em group} & The group of the attribute. \\
+\hline
+{\em name} & The name of the attribute. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The found attribute or std\+::nullopt if group or attribute not found. 
+\end{DoxyReturn}
+\Hypertarget{classHoofH5File_ae01efb364b369e07ba2414514f22699f}\label{classHoofH5File_ae01efb364b369e07ba2414514f22699f} 
+\index{HoofH5File@{HoofH5File}!getDatas@{getDatas}}
+\index{getDatas@{getDatas}!HoofH5File@{HoofH5File}}
+\doxysubsubsection{\texorpdfstring{getDatas()}{getDatas()}}
+{\footnotesize\ttfamily vector$<$ string $>$ Hoof\+H5\+File\+::get\+Datas (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{dataset,  }\item[{const std\+::string \&}]{group\+Type }\end{DoxyParamCaption}) const}
+
+
+
+Gets all data or quality groups in a dataset. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dataset} & The dataset to get groups from. \\
+\hline
+{\em group\+Type} & Type of the data group ("{}data"{} or "{}quality"{}). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of found data group names. 
+\end{DoxyReturn}
+\Hypertarget{classHoofH5File_a871fd2d59b5dd26cb2e51f0870d75188}\label{classHoofH5File_a871fd2d59b5dd26cb2e51f0870d75188} 
+\index{HoofH5File@{HoofH5File}!getDataset@{getDataset}}
+\index{getDataset@{getDataset}!HoofH5File@{HoofH5File}}
+\doxysubsubsection{\texorpdfstring{getDataset()}{getDataset()}}
+{\footnotesize\ttfamily optional$<$ vector2D$<$ unsigned char $>$ $>$ Hoof\+H5\+File\+::get\+Dataset (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{group,  }\item[{const std\+::string \&}]{name }\end{DoxyParamCaption}) const}
+
+
+
+Gets a dataset. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em group} & The dataset group. \\
+\hline
+{\em name} & The dataset name. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The dataset, or std\+::nullopt if not found. 
+\end{DoxyReturn}
+\Hypertarget{classHoofH5File_a7c9d96149af5ad756e9474adea918fc3}\label{classHoofH5File_a7c9d96149af5ad756e9474adea918fc3} 
+\index{HoofH5File@{HoofH5File}!getDatasets@{getDatasets}}
+\index{getDatasets@{getDatasets}!HoofH5File@{HoofH5File}}
+\doxysubsubsection{\texorpdfstring{getDatasets()}{getDatasets()}}
+{\footnotesize\ttfamily vector$<$ string $>$ Hoof\+H5\+File\+::get\+Datasets (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets all dataset names from the file. 
+
+\begin{DoxyReturn}{Returns}
+A vector of dataset names. 
+\end{DoxyReturn}
+\Hypertarget{classHoofH5File_a4208f1be877e11bff055b4ebc808f367}\label{classHoofH5File_a4208f1be877e11bff055b4ebc808f367} 
+\index{HoofH5File@{HoofH5File}!writeAtt@{writeAtt}}
+\index{writeAtt@{writeAtt}!HoofH5File@{HoofH5File}}
+\doxysubsubsection{\texorpdfstring{writeAtt()}{writeAtt()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void Hoof\+H5\+File\+::write\+Att (\begin{DoxyParamCaption}\item[{const string \&}]{group,  }\item[{const string \&}]{name,  }\item[{const T \&}]{value }\end{DoxyParamCaption}) const}
+
+
+
+Creates or overwrites an attribute of type T. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em group} & The group to write to. \\
+\hline
+{\em name} & Attribute name. \\
+\hline
+{\em value} & Attribute value. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classHoofH5File_a9023f9c0e8090ddd126111ffb04561f9}\label{classHoofH5File_a9023f9c0e8090ddd126111ffb04561f9} 
+\index{HoofH5File@{HoofH5File}!writeDataset@{writeDataset}}
+\index{writeDataset@{writeDataset}!HoofH5File@{HoofH5File}}
+\doxysubsubsection{\texorpdfstring{writeDataset()}{writeDataset()}}
+{\footnotesize\ttfamily void Hoof\+H5\+File\+::write\+Dataset (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{group,  }\item[{const std\+::string \&}]{name,  }\item[{const hoof\+::vector2D$<$ unsigned char $>$ \&}]{data }\end{DoxyParamCaption})}
+
+
+
+Creates or replaces a dataset. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em group} & The dataset group. \\
+\hline
+{\em name} & The dataset name. \\
+\hline
+{\em data} & The data array to replace. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{HoofH5File_8h}{Hoof\+H5\+File.\+h}}\item 
+\mbox{\hyperlink{HoofH5File_8cpp}{Hoof\+H5\+File.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,9 @@
+<map id="HoofHomQty.h" name="HoofHomQty.h">
+<area shape="rect" id="Node000001" title="Contains definition of HoofHomQty class." alt="" coords="90,5,198,31"/>
+<area shape="rect" id="Node000002" href="$HoofHomQty_8cpp.html" title="Contains the HoofHomQty class implementation." alt="" coords="5,79,128,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="123,42,81,80,78,76,120,38"/>
+<area shape="rect" id="Node000003" href="$HoofHomogenizer_8h.html" title="Contains definition of HoofHomogenizer class." alt="" coords="153,79,290,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="168,38,210,76,207,80,165,42"/>
+<area shape="rect" id="Node000004" href="$HoofHomogenizer_8cpp.html" title="Contains the HoofHomogenizer class implementation." alt="" coords="146,152,297,177"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="224,118,224,152,219,152,219,118"/>
+</map>

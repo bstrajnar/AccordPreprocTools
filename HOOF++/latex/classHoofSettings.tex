@@ -1,0 +1,140 @@
+\doxysection{Hoof\+Settings Class Reference}
+\hypertarget{classHoofSettings}{}\label{classHoofSettings}\index{HoofSettings@{HoofSettings}}
+
+
+Static class that holds all settings read from the namelist.  
+
+
+
+
+{\ttfamily \#include $<$Hoof\+Settings.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classHoofSettings_ae7389397bfbc61c1d80f427383fb4224}{Hoof\+Settings}} (const std\+::string \&\+\_\+namelist, const std\+::string \&\+\_\+in\+Folder, const std\+::string \&\+\_\+out\+Folder)
+\begin{DoxyCompactList}\small\item\em Constructor, reads command line parameters and namelist and fills the class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classHoofSettings_ac8be5a8b5b064b06d8e6c8166003bdb0}\label{classHoofSettings_ac8be5a8b5b064b06d8e6c8166003bdb0} 
+static std\+::string {\bfseries in\+Folder} = "{} "{}
+\begin{DoxyCompactList}\small\item\em Relative path to folder with input files. \end{DoxyCompactList}\item 
+\Hypertarget{classHoofSettings_ab6e1891229223c2366447f66bf65c412}\label{classHoofSettings_ab6e1891229223c2366447f66bf65c412} 
+static std\+::string {\bfseries out\+Folder} = "{}"{}
+\begin{DoxyCompactList}\small\item\em Relative path to folder for output files. \end{DoxyCompactList}\item 
+\Hypertarget{classHoofSettings_a863b632f874635045513be0ed5f37429}\label{classHoofSettings_a863b632f874635045513be0ed5f37429} 
+static std\+::string {\bfseries namelist} = "{}"{}
+\begin{DoxyCompactList}\small\item\em Name of the namelist file. \end{DoxyCompactList}\item 
+\Hypertarget{classHoofSettings_a1d04efcc7a160375764d14a7cbc8a925}\label{classHoofSettings_a1d04efcc7a160375764d14a7cbc8a925} 
+static std\+::vector$<$ std\+::string $>$ {\bfseries file\+Extensions}
+\begin{DoxyCompactList}\small\item\em File extensions representing valid radar files. \end{DoxyCompactList}\item 
+\Hypertarget{classHoofSettings_a72b0f58ece050d73e646cc107b9bf0a4}\label{classHoofSettings_a72b0f58ece050d73e646cc107b9bf0a4} 
+static std\+::string {\bfseries warning\+Tag} = "{}"{}
+\begin{DoxyCompactList}\small\item\em Text printed next to warnings, to make them searchable. \end{DoxyCompactList}\item 
+\Hypertarget{classHoofSettings_a6228641f4838aec3c55c5b357e7f1878}\label{classHoofSettings_a6228641f4838aec3c55c5b357e7f1878} 
+static std\+::string {\bfseries error\+Tag} = "{}"{}
+\begin{DoxyCompactList}\small\item\em Text printed next to errors, to make them searchable. \end{DoxyCompactList}\item 
+\Hypertarget{classHoofSettings_ab3d71d671c5d90aaf9875bb887bad72b}\label{classHoofSettings_ab3d71d671c5d90aaf9875bb887bad72b} 
+static bool {\bfseries print\+Console\+Warnings} = false
+\begin{DoxyCompactList}\small\item\em Flag for writing warnings to console. \end{DoxyCompactList}\item 
+\Hypertarget{classHoofSettings_ac9c7cebfe223e32db202f71d940db2fe}\label{classHoofSettings_ac9c7cebfe223e32db202f71d940db2fe} 
+static bool {\bfseries print\+Log\+Warnings} = false
+\begin{DoxyCompactList}\small\item\em Flag for writing warnings to log. \end{DoxyCompactList}\item 
+\Hypertarget{classHoofSettings_a696bf617f683ca2537947c9dcbc60580}\label{classHoofSettings_a696bf617f683ca2537947c9dcbc60580} 
+static bool {\bfseries print\+Console\+Errors} = false
+\begin{DoxyCompactList}\small\item\em Flag for writing errors to console. \end{DoxyCompactList}\item 
+\Hypertarget{classHoofSettings_ae7c92eddde2db798589fe03d87cd4f8e}\label{classHoofSettings_ae7c92eddde2db798589fe03d87cd4f8e} 
+static bool {\bfseries print\+Console\+Timing} = false
+\begin{DoxyCompactList}\small\item\em Flag for writing timing to console. \end{DoxyCompactList}\item 
+\Hypertarget{classHoofSettings_abed7069847726007911d52dcabdb7745}\label{classHoofSettings_abed7069847726007911d52dcabdb7745} 
+static std\+::vector$<$ std\+::string $>$ {\bfseries dbz\+Names}
+\begin{DoxyCompactList}\small\item\em Radar moment names containing DBZ. \end{DoxyCompactList}\item 
+\Hypertarget{classHoofSettings_a1b9507b5c962908be3e3d325252d17b6}\label{classHoofSettings_a1b9507b5c962908be3e3d325252d17b6} 
+static std\+::vector$<$ std\+::string $>$ {\bfseries th\+Names}
+\begin{DoxyCompactList}\small\item\em Radar moment names containing TH. \end{DoxyCompactList}\item 
+\Hypertarget{classHoofSettings_a6299eaf0bbc13feabe91529311ea9029}\label{classHoofSettings_a6299eaf0bbc13feabe91529311ea9029} 
+static std\+::vector$<$ std\+::string $>$ {\bfseries vrad\+Names}
+\begin{DoxyCompactList}\small\item\em Radar moment names containing VRAD. \end{DoxyCompactList}\item 
+\Hypertarget{classHoofSettings_a1676d850a07103f97ae1ead52207ce10}\label{classHoofSettings_a1676d850a07103f97ae1ead52207ce10} 
+static std\+::vector$<$ std\+::string $>$ {\bfseries dbz\+Qual\+Names}
+\begin{DoxyCompactList}\small\item\em Quality groups attached to DBZ to keep. \end{DoxyCompactList}\item 
+\Hypertarget{classHoofSettings_a65725b7656c86db27264e5bd44df2d95}\label{classHoofSettings_a65725b7656c86db27264e5bd44df2d95} 
+static std\+::vector$<$ \mbox{\hyperlink{classHoofNamAtt}{Hoof\+Nam\+Att}} $>$ {\bfseries com\+Atts}
+\begin{DoxyCompactList}\small\item\em Common radar attributes. \end{DoxyCompactList}\item 
+\Hypertarget{classHoofSettings_a9c70f006102895f6d8cdcf1c6a4a8e05}\label{classHoofSettings_a9c70f006102895f6d8cdcf1c6a4a8e05} 
+static hoof\+::\+Vec\+Dict$<$ \mbox{\hyperlink{classHoofNamAtt}{Hoof\+Nam\+Att}} $>$ {\bfseries spec\+Atts}
+\begin{DoxyCompactList}\small\item\em Specific radar attributes. \end{DoxyCompactList}\item 
+\Hypertarget{classHoofSettings_a30b4acb1942fe431cd9b95e8f0f136d6}\label{classHoofSettings_a30b4acb1942fe431cd9b95e8f0f136d6} 
+static bool {\bfseries dealiasing} = false
+\begin{DoxyCompactList}\small\item\em Flag for dealiasing. \end{DoxyCompactList}\item 
+\Hypertarget{classHoofSettings_aa0b72ab59477c9e5af3059e4c7bcaae5}\label{classHoofSettings_aa0b72ab59477c9e5af3059e4c7bcaae5} 
+static double {\bfseries z\+Sector\+Size} = 0.\+0
+\begin{DoxyCompactList}\small\item\em Size of z bin sector in wind model calculation. \end{DoxyCompactList}\item 
+\Hypertarget{classHoofSettings_a2938a0324b12fd58b954951d98d419b6}\label{classHoofSettings_a2938a0324b12fd58b954951d98d419b6} 
+static double {\bfseries z\+Max} = 0.\+0
+\begin{DoxyCompactList}\small\item\em Maximum height to dealias. \end{DoxyCompactList}\item 
+\Hypertarget{classHoofSettings_a84c1d41824cff7547f947fa717540189}\label{classHoofSettings_a84c1d41824cff7547f947fa717540189} 
+static int {\bfseries min\+Good\+Points} = 0
+\begin{DoxyCompactList}\small\item\em Minimum number of good points in a sector for wind model. \end{DoxyCompactList}\item 
+\Hypertarget{classHoofSettings_a10f1de882c35ece55b57fd1cfde88b4a}\label{classHoofSettings_a10f1de882c35ece55b57fd1cfde88b4a} 
+static double {\bfseries max\+Wind} = 0.\+0
+\begin{DoxyCompactList}\small\item\em Maximum wind speed in m/s allowed after dealiasing. \end{DoxyCompactList}\item 
+\Hypertarget{classHoofSettings_ad8c99b02463ca6aee48f80962068dc41}\label{classHoofSettings_ad8c99b02463ca6aee48f80962068dc41} 
+static bool {\bfseries superobing} = false
+\begin{DoxyCompactList}\small\item\em Flag for superobing. \end{DoxyCompactList}\item 
+\Hypertarget{classHoofSettings_a24b51bca2b96d8f92d6d5969e5fdf47a}\label{classHoofSettings_a24b51bca2b96d8f92d6d5969e5fdf47a} 
+static int {\bfseries range\+Bin\+Factor} = 0
+\begin{DoxyCompactList}\small\item\em Range bin multiplication factor for superobing bins. \end{DoxyCompactList}\item 
+\Hypertarget{classHoofSettings_ad49558da323cad785be852d6cc7137eb}\label{classHoofSettings_ad49558da323cad785be852d6cc7137eb} 
+static int {\bfseries ray\+Angle\+Factor} = 0
+\begin{DoxyCompactList}\small\item\em Ray angle multiplication factor for superobing bins. \end{DoxyCompactList}\item 
+\Hypertarget{classHoofSettings_a3046fc669482c6d44bf66be72ee615f8}\label{classHoofSettings_a3046fc669482c6d44bf66be72ee615f8} 
+static double {\bfseries max\+Arc\+Size} = 0.\+0
+\begin{DoxyCompactList}\small\item\em Maximum allowed arc size in meters for superob bins. \end{DoxyCompactList}\item 
+\Hypertarget{classHoofSettings_ad6918de7baf7236d3a44ae89772f804a}\label{classHoofSettings_ad6918de7baf7236d3a44ae89772f804a} 
+static double {\bfseries min\+Quality} = 0.\+0
+\begin{DoxyCompactList}\small\item\em Minimum quality of bin to be accepted in superobing. \end{DoxyCompactList}\item 
+\Hypertarget{classHoofSettings_ade679d03b571bad2bcf81264ac35907e}\label{classHoofSettings_ade679d03b571bad2bcf81264ac35907e} 
+static double {\bfseries dbz\+Clearsky} = 0.\+0
+\begin{DoxyCompactList}\small\item\em DBZ threshold for clear sky. \end{DoxyCompactList}\item 
+\Hypertarget{classHoofSettings_ab5e534084982eb2189f0fb0596efe07e}\label{classHoofSettings_ab5e534084982eb2189f0fb0596efe07e} 
+static double {\bfseries dbz\+Percentage} = 0.\+0
+\begin{DoxyCompactList}\small\item\em Percentage of good points needed for superob bin in DBZ. \end{DoxyCompactList}\item 
+\Hypertarget{classHoofSettings_ad06ec483e597ea047a674d91a257a900}\label{classHoofSettings_ad06ec483e597ea047a674d91a257a900} 
+static double {\bfseries vrad\+Percentage} = 0.\+0
+\begin{DoxyCompactList}\small\item\em Percentage of good points needed for superob bin in VRAD. \end{DoxyCompactList}\item 
+\Hypertarget{classHoofSettings_a97b5c8f99801cc08ed5185f0d1d90fe5}\label{classHoofSettings_a97b5c8f99801cc08ed5185f0d1d90fe5} 
+static double {\bfseries vrad\+Max\+Std} = 0.\+0
+\begin{DoxyCompactList}\small\item\em Maximum allowed standard deviation of points for superob bins for VRAD. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Static class that holds all settings read from the namelist. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classHoofSettings_ae7389397bfbc61c1d80f427383fb4224}\label{classHoofSettings_ae7389397bfbc61c1d80f427383fb4224} 
+\index{HoofSettings@{HoofSettings}!HoofSettings@{HoofSettings}}
+\index{HoofSettings@{HoofSettings}!HoofSettings@{HoofSettings}}
+\doxysubsubsection{\texorpdfstring{HoofSettings()}{HoofSettings()}}
+{\footnotesize\ttfamily Hoof\+Settings\+::\+Hoof\+Settings (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{\+\_\+namelist,  }\item[{const std\+::string \&}]{\+\_\+in\+Folder,  }\item[{const std\+::string \&}]{\+\_\+out\+Folder }\end{DoxyParamCaption})}
+
+
+
+Constructor, reads command line parameters and namelist and fills the class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+namelist} & Name of the namelist file from command line. \\
+\hline
+{\em \+\_\+in\+Folder} & Relative path to the folder containing radar files from command line. \\
+\hline
+{\em \+\_\+out\+Folder} & Relative path to the folder which contains output from commandline. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{HoofSettings_8h}{Hoof\+Settings.\+h}}\item 
+\mbox{\hyperlink{HoofSettings_8cpp}{Hoof\+Settings.\+cpp}}\end{DoxyCompactItemize}

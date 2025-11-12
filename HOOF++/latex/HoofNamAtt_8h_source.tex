@@ -1,0 +1,33 @@
+\doxysection{Hoof\+Nam\+Att.\+h}
+\hypertarget{HoofNamAtt_8h_source}{}\label{HoofNamAtt_8h_source}\mbox{\hyperlink{HoofNamAtt_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#ifndef\ HOOFNAMATT\_GUARD}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ HOOFNAMATT\_GUARD}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <optional>}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classHoofNamAtt}{HoofNamAtt}}}
+\DoxyCodeLine{00019\ \{}
+\DoxyCodeLine{00020\ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \textcolor{comment}{//\ members}}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{classHoofNamAtt_a3519bb0282c3eb7b0d0770727d43b1d4}{type}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00023\ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{classHoofNamAtt_af4ac5f61de5640e57f48914cd31d5759}{group}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00024\ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{classHoofNamAtt_a8e7125a953129cd031f62b83e952b9ee}{name}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ std::optional<int>\ \mbox{\hyperlink{classHoofNamAtt_a1c3aa013dcd415eddafbb930c3d85c88}{iValue}};\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00026\ \ \ \ \ \ \ std::optional<double>\ \mbox{\hyperlink{classHoofNamAtt_adafcf0b9062e4c00ca75ffce4339549f}{dValue}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{00027\ \ \ \ \ \ \ std::optional<std::string>\ \mbox{\hyperlink{classHoofNamAtt_aa5897d1e5fb39a06bfb3117bf394c20a}{sValue}};\ \ }
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \textcolor{comment}{//\ constructor,\ parses\ a\ line\ from\ the\ namelist}}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \mbox{\hyperlink{classHoofNamAtt}{HoofNamAtt}}(\textcolor{keyword}{const}\ std::string\&\ line);}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \textcolor{comment}{//\ get\ the\ metadata\ group}}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ std::optional<std::string>\ getMetadataGroup(\textcolor{keyword}{const}\ std::string\&\ groupType)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \textcolor{comment}{//\ equality\ operator\ so\ the\ class\ can\ be\ searched\ for\ in\ vectors}}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ operator==(\textcolor{keyword}{const}\ \mbox{\hyperlink{classHoofNamAtt}{HoofNamAtt}}\&\ other)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00035\ \};}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ HOOFNAMATT\_GUARD}}
+
+\end{DoxyCode}

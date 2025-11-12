@@ -1,0 +1,76 @@
+\doxysection{Hoof\+Measurement Struct Reference}
+\hypertarget{structHoofMeasurement}{}\label{structHoofMeasurement}\index{HoofMeasurement@{HoofMeasurement}}
+
+
+Struct that holds all data for one measurement (DBZ or VRAD) from one radar volume.  
+
+
+
+
+{\ttfamily \#include $<$Hoof\+Measurement.\+h$>$}
+
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structHoofMeasurement_a7682765927bd5326b4e31557bed62116}\label{structHoofMeasurement_a7682765927bd5326b4e31557bed62116} 
+std\+::vector$<$ std\+::string $>$ {\bfseries datasets}
+\begin{DoxyCompactList}\small\item\em Names of dataset groups in the HDF5 file. \end{DoxyCompactList}\item 
+\Hypertarget{structHoofMeasurement_abf8359b4f26c95f3b01aa0bc4c4b90ba}\label{structHoofMeasurement_abf8359b4f26c95f3b01aa0bc4c4b90ba} 
+std\+::vector$<$ std\+::string $>$ {\bfseries qualdatas}
+\begin{DoxyCompactList}\small\item\em Names of quality groups for the TOTAL quality in the HDF5 file. \end{DoxyCompactList}\item 
+\Hypertarget{structHoofMeasurement_a6cfb963469e6983c768f8716af9dbf26}\label{structHoofMeasurement_a6cfb963469e6983c768f8716af9dbf26} 
+int {\bfseries nel}
+\begin{DoxyCompactList}\small\item\em Number of elevations (datasets) in the HDF5 file after homogenization. \end{DoxyCompactList}\item 
+\Hypertarget{structHoofMeasurement_a4d7c21eba2d01a72092fd58425cb1336}\label{structHoofMeasurement_a4d7c21eba2d01a72092fd58425cb1336} 
+int {\bfseries naz\+Max}
+\begin{DoxyCompactList}\small\item\em Maximum number of azimuths in elevations. \end{DoxyCompactList}\item 
+\Hypertarget{structHoofMeasurement_aca017a4a77ed24e04edc11ae1dbc423c}\label{structHoofMeasurement_aca017a4a77ed24e04edc11ae1dbc423c} 
+int {\bfseries nr\+Max}
+\begin{DoxyCompactList}\small\item\em Maximum number of range bins in elevations. \end{DoxyCompactList}\item 
+\Hypertarget{structHoofMeasurement_a7cdb66a49ea4e4b8ef9d00e0159f6ceb}\label{structHoofMeasurement_a7cdb66a49ea4e4b8ef9d00e0159f6ceb} 
+std\+::vector$<$ double $>$ {\bfseries elangles}
+\begin{DoxyCompactList}\small\item\em Elevation angles in radians for all (el). \end{DoxyCompactList}\item 
+\Hypertarget{structHoofMeasurement_a2a769b653050a51965e6aef9d5d257a5}\label{structHoofMeasurement_a2a769b653050a51965e6aef9d5d257a5} 
+std\+::vector$<$ int $>$ {\bfseries naz}
+\begin{DoxyCompactList}\small\item\em Number of azimuths (rays) for all (el). \end{DoxyCompactList}\item 
+\Hypertarget{structHoofMeasurement_a54388fd15e7ff497ab6ba85bde65db09}\label{structHoofMeasurement_a54388fd15e7ff497ab6ba85bde65db09} 
+hoof\+::vector2D$<$ double $>$ {\bfseries azimuths}
+\begin{DoxyCompactList}\small\item\em Azimuths in radians for all (el, az). \end{DoxyCompactList}\item 
+\Hypertarget{structHoofMeasurement_adf60f25bb5a97f2f82d8e20eccea4e9b}\label{structHoofMeasurement_adf60f25bb5a97f2f82d8e20eccea4e9b} 
+std\+::vector$<$ int $>$ {\bfseries nr}
+\begin{DoxyCompactList}\small\item\em Number of range bins for all (el). \end{DoxyCompactList}\item 
+\Hypertarget{structHoofMeasurement_af511531fe13ba468f901e2f16ecd24cf}\label{structHoofMeasurement_af511531fe13ba468f901e2f16ecd24cf} 
+hoof\+::vector2D$<$ double $>$ {\bfseries ranges}
+\begin{DoxyCompactList}\small\item\em Bin ranges in meters for all (el, r). \end{DoxyCompactList}\item 
+\Hypertarget{structHoofMeasurement_abf2862c38839fafae27722cf919667c9}\label{structHoofMeasurement_abf2862c38839fafae27722cf919667c9} 
+std\+::vector$<$ double $>$ {\bfseries rscales}
+\begin{DoxyCompactList}\small\item\em Range bin scales for all (el). ~\newline
+ \end{DoxyCompactList}\item 
+\Hypertarget{structHoofMeasurement_a41845bd75ac3b346b1c8d3d1d1dbfdba}\label{structHoofMeasurement_a41845bd75ac3b346b1c8d3d1d1dbfdba} 
+std\+::vector$<$ double $>$ {\bfseries rstarts}
+\begin{DoxyCompactList}\small\item\em Range bin starts for all (el). ~\newline
+ \end{DoxyCompactList}\item 
+\Hypertarget{structHoofMeasurement_adc6c8e8e7d113a66c04a8f9ef071fe0a}\label{structHoofMeasurement_adc6c8e8e7d113a66c04a8f9ef071fe0a} 
+std\+::vector$<$ double $>$ {\bfseries vnys}
+\begin{DoxyCompactList}\small\item\em Nyquist velocities for all (el). \end{DoxyCompactList}\item 
+\Hypertarget{structHoofMeasurement_a0795613fc151656451f3285cb4a3596b}\label{structHoofMeasurement_a0795613fc151656451f3285cb4a3596b} 
+hoof\+::vector3D$<$ double $>$ {\bfseries meas}
+\begin{DoxyCompactList}\small\item\em Measurements of DBZ or VRAD for all (el, az, r). \end{DoxyCompactList}\item 
+\Hypertarget{structHoofMeasurement_a1f959cf23e4a0e1df3d7319e76a8e1d9}\label{structHoofMeasurement_a1f959cf23e4a0e1df3d7319e76a8e1d9} 
+hoof\+::vector3D$<$ double $>$ {\bfseries ths}
+\begin{DoxyCompactList}\small\item\em Values of TH corresponding to DBZ for all (el, az, r). \end{DoxyCompactList}\item 
+\Hypertarget{structHoofMeasurement_a6b6521e03a8738073e985aa14c70205f}\label{structHoofMeasurement_a6b6521e03a8738073e985aa14c70205f} 
+hoof\+::vector3D$<$ double $>$ {\bfseries quals}
+\begin{DoxyCompactList}\small\item\em TOTAL quality values for all (el, az, r). \end{DoxyCompactList}\item 
+\Hypertarget{structHoofMeasurement_a40adb34e1f119e0a17b5118b828de052}\label{structHoofMeasurement_a40adb34e1f119e0a17b5118b828de052} 
+hoof\+::vector3D$<$ double $>$ {\bfseries zs}
+\begin{DoxyCompactList}\small\item\em Heights for all (el, az, r). ~\newline
+ \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Struct that holds all data for one measurement (DBZ or VRAD) from one radar volume. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{HoofMeasurement_8h}{Hoof\+Measurement.\+h}}\end{DoxyCompactItemize}

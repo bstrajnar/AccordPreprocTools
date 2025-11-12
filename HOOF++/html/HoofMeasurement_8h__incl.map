@@ -1,0 +1,19 @@
+<map id="HoofMeasurement.h" name="HoofMeasurement.h">
+<area shape="rect" id="Node000001" title="Contains definition of HoofMeasurement struct." alt="" coords="41,5,181,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,152,60,177"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="107,32,48,141,43,139,103,30"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="85,152,143,177"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="114,31,116,138,111,138,109,31"/>
+<area shape="rect" id="Node000004" href="$HoofTypes_8h.html" title="Contains a namespace with shorthand aliases for types used throughout HOOF." alt="" coords="149,79,245,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="127,29,174,68,171,72,123,33"/>
+<area shape="poly" id="edge9_Node000004_Node000002" title=" " alt="" coords="171,106,73,149,71,144,169,102"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="185,106,140,145,136,141,182,102"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="317,152,367,177"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="221,102,307,144,305,148,219,106"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="391,152,453,177"/>
+<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="234,101,379,147,378,152,232,107"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="167,152,221,177"/>
+<area shape="poly" id="edge7_Node000004_Node000007" title=" " alt="" coords="199,104,198,139,192,138,194,104"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="245,152,292,177"/>
+<area shape="poly" id="edge8_Node000004_Node000008" title=" " alt="" coords="210,102,249,140,245,144,207,106"/>
+</map>

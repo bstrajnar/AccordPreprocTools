@@ -1,0 +1,95 @@
+\doxysection{Hoof\+Homogenizer Class Reference}
+\hypertarget{classHoofHomogenizer}{}\label{classHoofHomogenizer}\index{HoofHomogenizer@{HoofHomogenizer}}
+
+
+Worker object that homogenizes one HDF5 file.  
+
+
+
+
+{\ttfamily \#include $<$Hoof\+Homogenizer.\+h$>$}
+
+
+
+Inheritance diagram for Hoof\+Homogenizer\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=175pt]{classHoofHomogenizer__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Hoof\+Homogenizer\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=195pt]{classHoofHomogenizer__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classHoofHomogenizer_a2d2d76a17d8e67e89af7fb1dbcc9a8f6}{Hoof\+Homogenizer}} (\mbox{\hyperlink{classHoofH5File}{Hoof\+H5\+File}} \&in\+File, \mbox{\hyperlink{classHoofH5File}{Hoof\+H5\+File}} \&out\+File, \mbox{\hyperlink{structHoofData}{Hoof\+Data}} \&data)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\Hypertarget{classHoofHomogenizer_a9ff97735d61f42c9c138d5f0fa30eac4}\label{classHoofHomogenizer_a9ff97735d61f42c9c138d5f0fa30eac4} 
+void {\bfseries sort} ()
+\begin{DoxyCompactList}\small\item\em Finds all homogenization quantities in the input file satisfying the namelist criteria and sorts them in a homogenized order. \end{DoxyCompactList}\item 
+\Hypertarget{classHoofHomogenizer_aab48838566bb9690d2a15c88e44ae552}\label{classHoofHomogenizer_aab48838566bb9690d2a15c88e44ae552} 
+void {\bfseries check\+And\+Write} ()
+\begin{DoxyCompactList}\small\item\em Checks if attributes required in the namelist have values either in the namelist or in the input file and then writes them to the output file. \end{DoxyCompactList}\item 
+\Hypertarget{classHoofHomogenizer_aaa6abc82a32b5b854df42ec73502718d}\label{classHoofHomogenizer_aaa6abc82a32b5b854df42ec73502718d} 
+void {\bfseries store\+Data} ()
+\begin{DoxyCompactList}\small\item\em Stores homogenized data to a \doxylink{structHoofData}{Hoof\+Data} object for further use. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classHoofWorker}{Hoof\+Worker}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Hoof\+Worker} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classHoofWorker_a80533a89f2f0a830849a9e9b1bdc1fce}{warning}} (const std\+::string \&warn)
+\begin{DoxyCompactList}\small\item\em Adds a warning. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classHoofWorker_af98354e13b34da2bcaafb694c96c2f30}{error}} (const std\+::string \&err)
+\begin{DoxyCompactList}\small\item\em Adds an error. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classHoofWorker_a319c5550fb1843e1f8ea2a54ef2247dc}{output}} (std\+::ofstream \&logfile)
+\begin{DoxyCompactList}\small\item\em Outputs warnings and/or errors to console and/or log. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{classHoofWorker}{Hoof\+Worker}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string {\bfseries class\+Message}
+\begin{DoxyCompactList}\small\item\em String that gets added at the beginning of warnings and errors. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ {\bfseries warnings}
+\begin{DoxyCompactList}\small\item\em Generated warning texts. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ {\bfseries errors}
+\begin{DoxyCompactList}\small\item\em Generated error texts. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Worker object that homogenizes one HDF5 file. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classHoofHomogenizer_a2d2d76a17d8e67e89af7fb1dbcc9a8f6}\label{classHoofHomogenizer_a2d2d76a17d8e67e89af7fb1dbcc9a8f6} 
+\index{HoofHomogenizer@{HoofHomogenizer}!HoofHomogenizer@{HoofHomogenizer}}
+\index{HoofHomogenizer@{HoofHomogenizer}!HoofHomogenizer@{HoofHomogenizer}}
+\doxysubsubsection{\texorpdfstring{HoofHomogenizer()}{HoofHomogenizer()}}
+{\footnotesize\ttfamily Hoof\+Homogenizer\+::\+Hoof\+Homogenizer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classHoofH5File}{Hoof\+H5\+File}} \&}]{in\+File,  }\item[{\mbox{\hyperlink{classHoofH5File}{Hoof\+H5\+File}} \&}]{out\+File,  }\item[{\mbox{\hyperlink{structHoofData}{Hoof\+Data}} \&}]{data }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em in\+File} & The input file. \\
+\hline
+{\em out\+File} & The output file. \\
+\hline
+{\em data} & A \doxylink{structHoofData}{Hoof\+Data} object to fill for further use. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{HoofHomogenizer_8h}{Hoof\+Homogenizer.\+h}}\item 
+\mbox{\hyperlink{HoofHomogenizer_8cpp}{Hoof\+Homogenizer.\+cpp}}\end{DoxyCompactItemize}
